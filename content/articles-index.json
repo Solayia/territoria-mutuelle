@@ -1,26 +1,34 @@
 [
   {
-    "title": "Prévention des TMS : 5 gestes essentiels pour vos agents",
+    "title": "PrÃ©vention des TMS : 5 gestes essentiels pour vos agents",
     "slug": "prevention-tms-5-gestes",
-    "category": "Prévention",
+    "category": "PrÃ©vention",
     "date": "2026-05-14",
     "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
-    "excerpt": "Les troubles musculo-squelettiques touchent plus de 40% des agents territoriaux. Découvrez 5 gestes simples à mettre en place dans votre collectivité pour réduire les TMS."
+    "excerpt": "Les troubles musculo-squelettiques touchent plus de 40% des agents territoriaux. DÃ©couvrez 5 gestes simples Ã  mettre en place dans votre collectivitÃ© pour rÃ©duire les TMS."
   },
   {
-    "title": "QVCT en collectivité : par où commencer ?",
+    "title": "Les gestes qui sauvent",
+    "slug": "les-gestes-qui-sauvent",
+    "category": "Prévention",
+    "date": "2026-05-13",
+    "image": "https://unsplash.com/fr/photos/homme-en-t-shirt-blanc-et-pantalon-bleu-assis-sur-le-sol-8ByBvAXwFEc",
+    "excerpt": "Face à un accident, un malaise ou une situation d’urgence, les premières minutes sont décisives. Avant l’arrivée des secours, chacun peut agir simplement, à condition de connaître les bons réflexes. Les gestes qui sauvent reposent sur une règle essentielle : protéger, alerter, secourir."
+  },
+  {
+    "title": "QVCT en collectivitÃ© : par oÃ¹ commencer ?",
     "slug": "qvct-collectivite-par-ou-commencer",
     "category": "QVCT",
     "date": "2026-05-10",
     "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
-    "excerpt": "La Qualité de Vie et des Conditions de Travail est un levier puissant pour fidéliser vos agents et réduire l'absentéisme. Voici les premières étapes concrètes."
+    "excerpt": "La QualitÃ© de Vie et des Conditions de Travail est un levier puissant pour fidÃ©liser vos agents et rÃ©duire l'absentÃ©isme. Voici les premiÃ¨res Ã©tapes concrÃ¨tes."
   },
   {
-    "title": "Absentéisme en FPT : comprendre et agir efficacement",
+    "title": "AbsentÃ©isme en FPT : comprendre et agir efficacement",
     "slug": "absenteisme-fpt-comprendre-agir",
-    "category": "Actualités",
+    "category": "ActualitÃ©s",
     "date": "2026-05-05",
     "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
-    "excerpt": "L'absentéisme dans la fonction publique territoriale a augmenté de 12% en 5 ans. Analyse des causes et solutions concrètes pour votre collectivité."
+    "excerpt": "L'absentÃ©isme dans la fonction publique territoriale a augmentÃ© de 12% en 5 ans. Analyse des causes et solutions concrÃ¨tes pour votre collectivitÃ©."
   }
 ]
