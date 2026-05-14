@@ -26,7 +26,7 @@
         <li><a href="#presentation">Qui sommes-nous</a></li>
         <li><a href="#collectivites">Collectivités</a></li>
         <li><a href="#agents">Agents</a></li>
-        <li><a href="#prevention">Prévention</a></li>
+        <li><a href="blog.html">Ressources</a></li>
         <li><a href="#contact" class="nav-cta">Nous contacter</a></li>
       </ul>
       <button class="burger" aria-label="Ouvrir le menu">
@@ -237,7 +237,7 @@
           <span class="prevention-card-tag">Guides</span>
           <h3>Guides pratiques</h3>
           <p>Fiches thématiques sur les risques professionnels, les TMS, les RPS et les bonnes pratiques de prévention.</p>
-          <a href="#" class="prevention-link">
+          <a href="blog.html?cat=Prévention" class="prevention-link">
             Consulter les guides
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
           </a>
@@ -249,7 +249,7 @@
           <span class="prevention-card-tag">Webinaires</span>
           <h3>Formations en ligne</h3>
           <p>Webinaires et modules e-learning animés par des experts en prévention et en santé au travail.</p>
-          <a href="#" class="prevention-link">
+          <a href="blog.html?cat=Formations" class="prevention-link">
             Voir le programme
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
           </a>
@@ -261,7 +261,7 @@
           <span class="prevention-card-tag">Outils</span>
           <h3>Outils d'évaluation</h3>
           <p>Auto-diagnostics, questionnaires QVCT et tableaux de bord pour mesurer et piloter vos actions de prévention.</p>
-          <a href="#" class="prevention-link">
+          <a href="blog.html?cat=QVCT" class="prevention-link">
             Accéder aux outils
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
           </a>
@@ -273,7 +273,7 @@
           <span class="prevention-card-tag">Actualités</span>
           <h3>Veille et actualités</h3>
           <p>Suivez l'actualité de la prévention territoriale : réglementations, retours d'expérience et innovations.</p>
-          <a href="#" class="prevention-link">
+          <a href="blog.html?cat=Actualités" class="prevention-link">
             Lire les actualités
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
           </a>
@@ -310,6 +310,26 @@
           <h3>Innovation</h3>
           <p>Des outils numériques et des programmes de prévention à la pointe pour répondre aux enjeux de demain.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== DERNIERS ARTICLES ======================== -->
+  <section class="section section-light" id="articles">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Ressources</span>
+        <h2 class="section-title">Nos derniers <span class="text-primary">articles</span></h2>
+        <p class="section-subtitle">Retrouvez nos conseils et actualités pour améliorer la prévention et la qualité de vie au travail dans votre collectivité.</p>
+      </div>
+      <div class="blog-grid blog-grid-home" id="home-articles">
+        <!-- Chargé dynamiquement -->
+      </div>
+      <div class="section-cta-link reveal">
+        <a href="blog.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          Voir toutes les ressources
+        </a>
       </div>
     </div>
   </section>
@@ -373,16 +393,16 @@
             <li><a href="#presentation">Qui sommes-nous</a></li>
             <li><a href="#collectivites">Collectivités</a></li>
             <li><a href="#agents">Agents</a></li>
-            <li><a href="#prevention">Prévention</a></li>
+            <li><a href="blog.html">Ressources</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Ressources</h4>
           <ul>
-            <li><a href="#">Guides pratiques</a></li>
-            <li><a href="#">Formations</a></li>
-            <li><a href="#">Outils QVCT</a></li>
-            <li><a href="#">Actualités</a></li>
+            <li><a href="blog.html?cat=Prévention">Prévention</a></li>
+            <li><a href="blog.html?cat=Formations">Formations</a></li>
+            <li><a href="blog.html?cat=QVCT">QVCT</a></li>
+            <li><a href="blog.html?cat=Actualités">Actualités</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -421,5 +441,47 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+  /* Chargement des derniers articles sur la homepage */
+  (function() {
+    const grid = document.getElementById('home-articles');
+    if (!grid) return;
+
+    function getBasePath() {
+      const path = window.location.pathname;
+      const parts = path.split('/').filter(Boolean);
+      if (parts.length > 1) return '/' + parts.slice(0, -1).join('/');
+      return '';
+    }
+
+    function formatDate(dateStr) {
+      return new Date(dateStr).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    fetch(getBasePath() + '/content/articles-index.json')
+      .then(r => r.json())
+      .then(articles => {
+        articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const latest = articles.slice(0, 3);
+        grid.innerHTML = latest.map(a => `
+          <a href="article.html?slug=${a.slug}" class="blog-card reveal">
+            <div class="blog-card-img"><img src="${a.image}" alt="${a.title}" loading="lazy"></div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-cat">${a.category}</span>
+                <span class="blog-card-date">${formatDate(a.date)}</span>
+              </div>
+              <h3 class="blog-card-title">${a.title}</h3>
+              <p class="blog-card-excerpt">${a.excerpt}</p>
+              <span class="blog-card-link">Lire l'article
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        `).join('');
+      })
+      .catch(() => {});
+  })();
+  </script>
 </body>
 </html>

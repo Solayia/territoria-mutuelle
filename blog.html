@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ressources Prévention & QVCT — TERRITORIA Mutuelle</title>
+  <meta name="description" content="Articles, guides et actualités sur la prévention des risques et la qualité de vie au travail dans la fonction publique territoriale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-light scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="currentColor"/>
+          <path d="M10 14h20v3H10zM10 20h14v3H10zM10 26h18v3H10z" fill="white"/>
+        </svg>
+        <span class="logo-text">TERRITORIA <span class="logo-accent">Mutuelle</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#presentation">Qui sommes-nous</a></li>
+        <li><a href="index.html#collectivites">Collectivités</a></li>
+        <li><a href="index.html#agents">Agents</a></li>
+        <li><a href="blog.html" class="nav-active-link">Ressources</a></li>
+        <li><a href="index.html#contact" class="nav-cta nav-cta-solid">Nous contacter</a></li>
+      </ul>
+      <button class="burger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <span class="section-tag">Ressources</span>
+      <h1 class="page-title">Prévention & QVCT</h1>
+      <p class="page-subtitle">Articles, guides et actualités pour renforcer la prévention des risques et améliorer la qualité de vie au travail dans votre collectivité.</p>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="blog-filters">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn filter-active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="Prévention">Prévention</button>
+        <button class="filter-btn" data-filter="QVCT">QVCT</button>
+        <button class="filter-btn" data-filter="Actualités">Actualités</button>
+        <button class="filter-btn" data-filter="Formations">Formations</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES GRID -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-grid" id="blog-grid">
+        <!-- Articles chargés dynamiquement par JS -->
+      </div>
+      <div class="blog-empty" id="blog-empty" style="display:none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <p>Aucun article dans cette catégorie pour le moment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="currentColor"/>
+              <path d="M10 14h20v3H10zM10 20h14v3H10zM10 26h18v3H10z" fill="white"/>
+            </svg>
+            <span class="logo-text">TERRITORIA <span class="logo-accent">Mutuelle</span></span>
+          </a>
+          <p class="footer-desc">Mutuelle spécialiste de la fonction publique territoriale. Prévention, protection et qualité de vie au travail.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html#presentation">Qui sommes-nous</a></li>
+            <li><a href="index.html#collectivites">Collectivités</a></li>
+            <li><a href="index.html#agents">Agents</a></li>
+            <li><a href="blog.html">Ressources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="blog.html?cat=Prévention">Prévention</a></li>
+            <li><a href="blog.html?cat=QVCT">QVCT</a></li>
+            <li><a href="blog.html?cat=Formations">Formations</a></li>
+            <li><a href="blog.html?cat=Actualités">Actualités</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">CGU</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TERRITORIA Mutuelle. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  /* ============================================
+     Blog — Chargement et filtrage des articles
+     ============================================ */
+  (function() {
+    const grid = document.getElementById('blog-grid');
+    const emptyState = document.getElementById('blog-empty');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    let allArticles = [];
+
+    // Déterminer le base path pour GitHub Pages
+    function getBasePath() {
+      const path = window.location.pathname;
+      const parts = path.split('/').filter(Boolean);
+      if (parts.length > 1) {
+        return '/' + parts.slice(0, -1).join('/');
+      }
+      return '';
+    }
+
+    // Charger les articles depuis le JSON
+    async function loadArticles() {
+      try {
+        const basePath = getBasePath();
+        const res = await fetch(basePath + '/content/articles-index.json');
+        allArticles = await res.json();
+        // Trier par date décroissante
+        allArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Vérifier si un filtre est passé en URL
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('cat');
+        if (cat) {
+          filterBtns.forEach(btn => {
+            btn.classList.toggle('filter-active', btn.dataset.filter === cat);
+          });
+          renderArticles(cat);
+        } else {
+          renderArticles('all');
+        }
+      } catch (err) {
+        console.error('Erreur chargement articles:', err);
+        grid.innerHTML = '<p style="text-align:center;color:var(--gray-500);padding:40px;">Impossible de charger les articles.</p>';
+      }
+    }
+
+    function formatDate(dateStr) {
+      const d = new Date(dateStr);
+      return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    function renderArticles(filter) {
+      const filtered = filter === 'all' ? allArticles : allArticles.filter(a => a.category === filter);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.style.display = 'flex';
+        return;
+      }
+
+      emptyState.style.display = 'none';
+      grid.innerHTML = filtered.map(article => `
+        <a href="article.html?slug=${article.slug}" class="blog-card">
+          <div class="blog-card-img">
+            <img src="${article.image}" alt="${article.title}" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-cat">${article.category}</span>
+              <span class="blog-card-date">${formatDate(article.date)}</span>
+            </div>
+            <h3 class="blog-card-title">${article.title}</h3>
+            <p class="blog-card-excerpt">${article.excerpt}</p>
+            <span class="blog-card-link">
+              Lire l'article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    // Filtres
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('filter-active'));
+        btn.classList.add('filter-active');
+        renderArticles(btn.dataset.filter);
+      });
+    });
+
+    loadArticles();
+  })();
+  </script>
+</body>
+</html>
