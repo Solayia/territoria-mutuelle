@@ -208,4 +208,184 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ------------------------------------------
+     7. Header Menu Toggle (inner pages)
+     ------------------------------------------ */
+  const header = document.querySelector('.header');
+  const menuToggle = document.getElementById('menuToggle');
+  const navEl = document.getElementById('nav');
+
+  if (header && menuToggle && navEl) {
+    // Header scroll detection
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // Mobile menu toggle
+    menuToggle.addEventListener('click', () => {
+      navEl.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+      document.body.style.overflow = navEl.classList.contains('open') ? 'hidden' : '';
+    });
+
+    // Close mobile menu on link click
+    navEl.querySelectorAll('.nav-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        navEl.classList.remove('open');
+        menuToggle.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  /* ------------------------------------------
+     8. Accordion
+     ------------------------------------------ */
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  if (accordionHeaders.length > 0) {
+    accordionHeaders.forEach((header) => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const body = item.querySelector('.accordion-body');
+        const isActive = item.classList.contains('active');
+
+        // Close all accordion items
+        document.querySelectorAll('.accordion-item').forEach((otherItem) => {
+          otherItem.classList.remove('active');
+          const otherBody = otherItem.querySelector('.accordion-body');
+          if (otherBody) otherBody.style.maxHeight = null;
+        });
+
+        // Open the clicked item if it was not already active
+        if (!isActive) {
+          item.classList.add('active');
+          body.style.maxHeight = body.scrollHeight + 'px';
+        }
+      });
+    });
+  }
+
+  /* ------------------------------------------
+     8b. Accordion — trigger variant (missions page)
+     ------------------------------------------ */
+  const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+
+  if (accordionTriggers.length > 0) {
+    accordionTriggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.accordion-item');
+        const content = item.querySelector('.accordion-content');
+        const isOpen = item.classList.contains('open');
+
+        // Close all sibling accordion items within the same accordion container
+        const parentAccordion = trigger.closest('.accordion');
+        if (parentAccordion) {
+          parentAccordion.querySelectorAll('.accordion-item').forEach((otherItem) => {
+            otherItem.classList.remove('open');
+            const otherTrigger = otherItem.querySelector('.accordion-trigger');
+            if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+            const otherContent = otherItem.querySelector('.accordion-content');
+            if (otherContent) otherContent.style.maxHeight = null;
+          });
+        }
+
+        // Open the clicked item if it was not already open
+        if (!isOpen) {
+          item.classList.add('open');
+          trigger.setAttribute('aria-expanded', 'true');
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  }
+
+  /* ------------------------------------------
+     9. Contact Form Handling
+     ------------------------------------------ */
+  const contactForm = document.getElementById('contactForm');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Simulate form submission
+      const submitBtn = contactForm.querySelector('.btn-primary');
+      const successMsg = document.getElementById('formSuccess');
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi en cours...';
+      }
+
+      // Simulate a short delay for UX
+      setTimeout(() => {
+        if (successMsg) {
+          successMsg.classList.add('show');
+        }
+        contactForm.reset();
+
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Envoyer votre message';
+        }
+
+        // Scroll success message into view
+        if (successMsg) {
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 800);
+    });
+  }
+
+  /* ------------------------------------------
+     10. Counter Animation (inner pages)
+     ------------------------------------------ */
+  const figureNumbers = document.querySelectorAll('.figure-number-inner[data-target]');
+
+  if (figureNumbers.length > 0) {
+    const animateFigure = (el) => {
+      const target = parseInt(el.getAttribute('data-target'), 10);
+      const prefix = el.getAttribute('data-prefix') || '+';
+      const duration = 2000;
+      let startTime = null;
+
+      const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+      const step = (timestamp) => {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutCubic(progress);
+        const currentValue = Math.floor(easedProgress * target);
+
+        el.textContent = prefix + currentValue.toLocaleString('fr-FR');
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          // Ensure the final displayed value matches the original text
+          el.textContent = prefix + target.toLocaleString('fr-FR');
+        }
+      };
+
+      requestAnimationFrame(step);
+    };
+
+    const figureObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateFigure(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    figureNumbers.forEach((el) => figureObserver.observe(el));
+  }
+
 });

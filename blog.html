@@ -1,216 +1,175 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ressources Prévention & QVCT — TERRITORIA Mutuelle</title>
-  <meta name="description" content="Articles, guides et actualités sur la prévention des risques et la qualité de vie au travail dans la fonction publique territoriale.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualit&eacute;s | TERRITORIA mutuelle</title>
+    <meta name="description" content="Retrouvez les actualit&eacute;s, articles et ressources de TERRITORIA mutuelle sur la pr&eacute;vention, la sant&eacute; au travail et la QVCT dans les collectivit&eacute;s territoriales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-light scrolled">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" rx="8" fill="currentColor"/>
-          <path d="M10 14h20v3H10zM10 20h14v3H10zM10 26h18v3H10z" fill="white"/>
-        </svg>
-        <span class="logo-text">TERRITORIA <span class="logo-accent">Mutuelle</span></span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html#presentation">Qui sommes-nous</a></li>
-        <li><a href="index.html#collectivites">Collectivités</a></li>
-        <li><a href="index.html#agents">Agents</a></li>
-        <li><a href="blog.html" class="nav-active-link">Ressources</a></li>
-        <li><a href="index.html#contact" class="nav-cta nav-cta-solid">Nous contacter</a></li>
-      </ul>
-      <button class="burger" aria-label="Ouvrir le menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <div class="container">
-      <span class="section-tag">Ressources</span>
-      <h1 class="page-title">Prévention & QVCT</h1>
-      <p class="page-subtitle">Articles, guides et actualités pour renforcer la prévention des risques et améliorer la qualité de vie au travail dans votre collectivité.</p>
-    </div>
-  </section>
-
-  <!-- FILTERS -->
-  <section class="blog-filters">
-    <div class="container">
-      <div class="filter-bar">
-        <button class="filter-btn filter-active" data-filter="all">Tous</button>
-        <button class="filter-btn" data-filter="Prévention">Prévention</button>
-        <button class="filter-btn" data-filter="QVCT">QVCT</button>
-        <button class="filter-btn" data-filter="Actualités">Actualités</button>
-        <button class="filter-btn" data-filter="Formations">Formations</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ARTICLES GRID -->
-  <section class="blog-section">
-    <div class="container">
-      <div class="blog-grid" id="blog-grid">
-        <!-- Articles chargés dynamiquement par JS -->
-      </div>
-      <div class="blog-empty" id="blog-empty" style="display:none;">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <p>Aucun article dans cette catégorie pour le moment.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="40" height="40" rx="8" fill="currentColor"/>
-              <path d="M10 14h20v3H10zM10 20h14v3H10zM10 26h18v3H10z" fill="white"/>
-            </svg>
-            <span class="logo-text">TERRITORIA <span class="logo-accent">Mutuelle</span></span>
-          </a>
-          <p class="footer-desc">Mutuelle spécialiste de la fonction publique territoriale. Prévention, protection et qualité de vie au travail.</p>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo.png" alt="TERRITORIA mutuelle - Groupe APICIL">
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="qui-sommes-nous.html" class="nav-link">Qui sommes-nous</a></li>
+                    <li><a href="nos-missions.html" class="nav-link">Nos missions</a></li>
+                    <li><a href="blog.html" class="nav-link active">Actualit&eacute;s</a></li>
+                    <li><a href="contact.html" class="nav-link btn-nav">Nous contacter</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="index.html#presentation">Qui sommes-nous</a></li>
-            <li><a href="index.html#collectivites">Collectivités</a></li>
-            <li><a href="index.html#agents">Agents</a></li>
-            <li><a href="blog.html">Ressources</a></li>
-          </ul>
+    </header>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Actualit&eacute;s</h1>
+            <p class="page-hero-subtitle">Retrouvez nos derni&egrave;res actualit&eacute;s, ressources et publications</p>
         </div>
-        <div class="footer-col">
-          <h4>Ressources</h4>
-          <ul>
-            <li><a href="blog.html?cat=Prévention">Prévention</a></li>
-            <li><a href="blog.html?cat=QVCT">QVCT</a></li>
-            <li><a href="blog.html?cat=Formations">Formations</a></li>
-            <li><a href="blog.html?cat=Actualités">Actualités</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Légal</h4>
-          <ul>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Politique de confidentialité</a></li>
-            <li><a href="#">CGU</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 TERRITORIA Mutuelle. Tous droits réservés.</p>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="script.js"></script>
-  <script>
-  /* ============================================
-     Blog — Chargement et filtrage des articles
-     ============================================ */
-  (function() {
-    const grid = document.getElementById('blog-grid');
-    const emptyState = document.getElementById('blog-empty');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    let allArticles = [];
+    <!-- ========== BLOG GRID ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-grid">
 
-    // Déterminer le base path pour GitHub Pages
-    function getBasePath() {
-      const path = window.location.pathname;
-      const parts = path.split('/').filter(Boolean);
-      if (parts.length > 1) {
-        return '/' + parts.slice(0, -1).join('/');
-      }
-      return '';
-    }
+                <!-- Card 1 -->
+                <article class="card blog-card">
+                    <div class="blog-card-image" style="background: linear-gradient(135deg, #C8102E 0%, #FF6B7A 100%);"></div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">15 juin 2026</span>
+                        <h3 class="blog-card-title">Lancement du programme CAP BIEN-&Ecirc;TRE 2026</h3>
+                        <p class="blog-card-excerpt">D&eacute;couvrez notre nouveau programme de webinaires d&eacute;di&eacute;s au bien-&ecirc;tre et &agrave; la sant&eacute; des agents territoriaux.</p>
+                        <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
+                    </div>
+                </article>
 
-    // Charger les articles depuis le JSON
-    async function loadArticles() {
-      try {
-        const basePath = getBasePath();
-        const res = await fetch(basePath + '/content/articles-index.json');
-        allArticles = await res.json();
-        // Trier par date décroissante
-        allArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+                <!-- Card 2 -->
+                <article class="card blog-card">
+                    <div class="blog-card-image" style="background: linear-gradient(135deg, #0D9488 0%, #5EEAD4 100%);"></div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">10 juin 2026</span>
+                        <h3 class="blog-card-title">Pr&eacute;vention des TMS : guide pratique pour les collectivit&eacute;s</h3>
+                        <p class="blog-card-excerpt">Un guide complet pour mettre en place des actions de pr&eacute;vention des troubles musculo-squelettiques dans votre collectivit&eacute;.</p>
+                        <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
+                    </div>
+                </article>
 
-        // Vérifier si un filtre est passé en URL
-        const params = new URLSearchParams(window.location.search);
-        const cat = params.get('cat');
-        if (cat) {
-          filterBtns.forEach(btn => {
-            btn.classList.toggle('filter-active', btn.dataset.filter === cat);
-          });
-          renderArticles(cat);
-        } else {
-          renderArticles('all');
-        }
-      } catch (err) {
-        console.error('Erreur chargement articles:', err);
-        grid.innerHTML = '<p style="text-align:center;color:var(--gray-500);padding:40px;">Impossible de charger les articles.</p>';
-      }
-    }
+                <!-- Card 3 -->
+                <article class="card blog-card">
+                    <div class="blog-card-image" style="background: linear-gradient(135deg, #1A202C 0%, #4A5568 100%);"></div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">2 juin 2026</span>
+                        <h3 class="blog-card-title">TERRITORIA mutuelle au congr&egrave;s de l'ANDRHDT</h3>
+                        <p class="blog-card-excerpt">Retour sur notre participation au congr&egrave;s annuel de l'Association Nationale des DRH des Territoires.</p>
+                        <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
+                    </div>
+                </article>
 
-    function formatDate(dateStr) {
-      const d = new Date(dateStr);
-      return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-    }
+                <!-- Card 4 -->
+                <article class="card blog-card">
+                    <div class="blog-card-image" style="background: linear-gradient(135deg, #2563EB 0%, #60A5FA 100%);"></div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">25 mai 2026</span>
+                        <h3 class="blog-card-title">Nouveau : l'Indice de Bien-&Ecirc;tre au Travail (IBET)</h3>
+                        <p class="blog-card-excerpt">Un outil innovant pour mesurer et suivre le bien-&ecirc;tre de vos agents au quotidien.</p>
+                        <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
+                    </div>
+                </article>
 
-    function renderArticles(filter) {
-      const filtered = filter === 'all' ? allArticles : allArticles.filter(a => a.category === filter);
+                <!-- Card 5 -->
+                <article class="card blog-card">
+                    <div class="blog-card-image" style="background: linear-gradient(135deg, #DB2777 0%, #F472B6 100%);"></div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">18 mai 2026</span>
+                        <h3 class="blog-card-title">Sant&eacute; mentale au travail : agir ensemble</h3>
+                        <p class="blog-card-excerpt">Les cl&eacute;s pour promouvoir la sant&eacute; mentale et pr&eacute;venir les risques psychosociaux dans la fonction publique territoriale.</p>
+                        <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
+                    </div>
+                </article>
 
-      if (filtered.length === 0) {
-        grid.innerHTML = '';
-        emptyState.style.display = 'flex';
-        return;
-      }
+                <!-- Card 6 -->
+                <article class="card blog-card">
+                    <div class="blog-card-image" style="background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);"></div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">5 mai 2026</span>
+                        <h3 class="blog-card-title">T MAG #12 : dossier sp&eacute;cial QVCT</h3>
+                        <p class="blog-card-excerpt">Le dernier num&eacute;ro de T MAG consacre un dossier complet &agrave; la Qualit&eacute; de Vie et aux Conditions de Travail.</p>
+                        <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
+                    </div>
+                </article>
 
-      emptyState.style.display = 'none';
-      grid.innerHTML = filtered.map(article => `
-        <a href="article.html?slug=${article.slug}" class="blog-card">
-          <div class="blog-card-img">
-            <img src="${article.image}" alt="${article.title}" loading="lazy">
-          </div>
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-card-cat">${article.category}</span>
-              <span class="blog-card-date">${formatDate(article.date)}</span>
             </div>
-            <h3 class="blog-card-title">${article.title}</h3>
-            <p class="blog-card-excerpt">${article.excerpt}</p>
-            <span class="blog-card-link">
-              Lire l'article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
-      `).join('');
-    }
+        </div>
+    </section>
 
-    // Filtres
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('filter-active'));
-        btn.classList.add('filter-active');
-        renderArticles(btn.dataset.filter);
-      });
-    });
+    <!-- ========== NEWSLETTER CTA ========== -->
+    <section class="section section--light">
+        <div class="container">
+            <div class="newsletter-block">
+                <h2>Restez inform&eacute;</h2>
+                <p>Inscrivez-vous &agrave; T&nbsp;ACTU, notre newsletter, pour recevoir les derni&egrave;res actualit&eacute;s de TERRITORIA mutuelle.</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" class="newsletter-input" placeholder="Votre adresse e-mail" required aria-label="Adresse e-mail">
+                    <button type="submit" class="btn newsletter-btn">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-    loadArticles();
-  })();
-  </script>
+    <!-- ========== CTA BANNER ========== -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Vous avez un sujet &agrave; nous proposer ?</h2>
+            <a href="contact.html" class="btn">Contactez-nous</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/img/logo.png" alt="TERRITORIA mutuelle" class="footer-logo">
+                    <p>Mutuelle de livre III<br>du Code de la Mutualit&eacute;</p>
+                    <p class="footer-group">Groupe APICIL</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+                        <li><a href="nos-missions.html">Nos missions</a></li>
+                        <li><a href="blog.html">Actualit&eacute;s</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>54 rue de Gabiel - CS 76016<br>79185 Chauray cedex</p>
+                    <p><a href="mailto:contact@territoriamutuelle.com">contact@territoriamutuelle.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TERRITORIA mutuelle. Tous droits r&eacute;serv&eacute;s.</p>
+                <a href="#">Mentions l&eacute;gales</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
