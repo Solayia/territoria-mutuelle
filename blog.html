@@ -5,12 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualit&eacute;s | TERRITORIA mutuelle</title>
     <meta name="description" content="Retrouvez les actualit&eacute;s, articles et ressources de TERRITORIA mutuelle sur la pr&eacute;vention, la sant&eacute; au travail et la QVCT dans les collectivit&eacute;s territoriales.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Actualit&eacute;s | TERRITORIA mutuelle">
+    <meta property="og:description" content="Actualit&eacute;s, articles et ressources sur la pr&eacute;vention et la sant&eacute; au travail dans les collectivit&eacute;s territoriales.">
+    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Skip to content -->
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
 
     <!-- ========== HEADER ========== -->
     <header class="header" id="header">
@@ -27,30 +43,38 @@
                     <li><a href="contact.html" class="nav-link btn-nav">Nous contacter</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
+    <main id="main">
+
     <!-- ========== PAGE HERO ========== -->
     <section class="page-hero">
         <div class="container">
+            <div class="breadcrumb"><a href="index.html">Accueil</a> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> Actualit&eacute;s</div>
             <h1>Actualit&eacute;s</h1>
             <p class="page-hero-subtitle">Retrouvez nos derni&egrave;res actualit&eacute;s, ressources et publications</p>
         </div>
     </section>
 
     <!-- ========== BLOG GRID ========== -->
-    <section class="section">
+    <section class="section section-white">
         <div class="container">
             <div class="blog-grid">
 
                 <!-- Card 1 -->
-                <article class="card blog-card">
-                    <div class="blog-card-image" style="background: linear-gradient(135deg, #C8102E 0%, #FF6B7A 100%);"></div>
+                <article class="blog-card reveal stagger-1">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=600&q=80" alt="Programme CAP BIEN-&Ecirc;TRE 2026" loading="lazy">
+                    </div>
                     <div class="blog-card-content">
-                        <span class="blog-card-date">15 juin 2026</span>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-tag">Pr&eacute;vention</span>
+                            <span class="blog-card-date">15 juin 2026</span>
+                        </div>
                         <h3 class="blog-card-title">Lancement du programme CAP BIEN-&Ecirc;TRE 2026</h3>
                         <p class="blog-card-excerpt">D&eacute;couvrez notre nouveau programme de webinaires d&eacute;di&eacute;s au bien-&ecirc;tre et &agrave; la sant&eacute; des agents territoriaux.</p>
                         <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
@@ -58,10 +82,15 @@
                 </article>
 
                 <!-- Card 2 -->
-                <article class="card blog-card">
-                    <div class="blog-card-image" style="background: linear-gradient(135deg, #0D9488 0%, #5EEAD4 100%);"></div>
+                <article class="blog-card reveal stagger-2">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Pr&eacute;vention des TMS" loading="lazy">
+                    </div>
                     <div class="blog-card-content">
-                        <span class="blog-card-date">10 juin 2026</span>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-tag">Sant&eacute;</span>
+                            <span class="blog-card-date">10 juin 2026</span>
+                        </div>
                         <h3 class="blog-card-title">Pr&eacute;vention des TMS : guide pratique pour les collectivit&eacute;s</h3>
                         <p class="blog-card-excerpt">Un guide complet pour mettre en place des actions de pr&eacute;vention des troubles musculo-squelettiques dans votre collectivit&eacute;.</p>
                         <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
@@ -69,10 +98,15 @@
                 </article>
 
                 <!-- Card 3 -->
-                <article class="card blog-card">
-                    <div class="blog-card-image" style="background: linear-gradient(135deg, #1A202C 0%, #4A5568 100%);"></div>
+                <article class="blog-card reveal stagger-3">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="Congr&egrave;s ANDRHDT" loading="lazy">
+                    </div>
                     <div class="blog-card-content">
-                        <span class="blog-card-date">2 juin 2026</span>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-tag">&Eacute;v&eacute;nement</span>
+                            <span class="blog-card-date">2 juin 2026</span>
+                        </div>
                         <h3 class="blog-card-title">TERRITORIA mutuelle au congr&egrave;s de l'ANDRHDT</h3>
                         <p class="blog-card-excerpt">Retour sur notre participation au congr&egrave;s annuel de l'Association Nationale des DRH des Territoires.</p>
                         <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
@@ -80,10 +114,15 @@
                 </article>
 
                 <!-- Card 4 -->
-                <article class="card blog-card">
-                    <div class="blog-card-image" style="background: linear-gradient(135deg, #2563EB 0%, #60A5FA 100%);"></div>
+                <article class="blog-card reveal stagger-1">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Indice de Bien-&Ecirc;tre au Travail" loading="lazy">
+                    </div>
                     <div class="blog-card-content">
-                        <span class="blog-card-date">25 mai 2026</span>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-tag">Innovation</span>
+                            <span class="blog-card-date">25 mai 2026</span>
+                        </div>
                         <h3 class="blog-card-title">Nouveau : l'Indice de Bien-&Ecirc;tre au Travail (IBET)</h3>
                         <p class="blog-card-excerpt">Un outil innovant pour mesurer et suivre le bien-&ecirc;tre de vos agents au quotidien.</p>
                         <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
@@ -91,10 +130,15 @@
                 </article>
 
                 <!-- Card 5 -->
-                <article class="card blog-card">
-                    <div class="blog-card-image" style="background: linear-gradient(135deg, #DB2777 0%, #F472B6 100%);"></div>
+                <article class="blog-card reveal stagger-2">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=600&q=80" alt="Sant&eacute; mentale au travail" loading="lazy">
+                    </div>
                     <div class="blog-card-content">
-                        <span class="blog-card-date">18 mai 2026</span>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-tag">QVCT</span>
+                            <span class="blog-card-date">18 mai 2026</span>
+                        </div>
                         <h3 class="blog-card-title">Sant&eacute; mentale au travail : agir ensemble</h3>
                         <p class="blog-card-excerpt">Les cl&eacute;s pour promouvoir la sant&eacute; mentale et pr&eacute;venir les risques psychosociaux dans la fonction publique territoriale.</p>
                         <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
@@ -102,10 +146,15 @@
                 </article>
 
                 <!-- Card 6 -->
-                <article class="card blog-card">
-                    <div class="blog-card-image" style="background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);"></div>
+                <article class="blog-card reveal stagger-3">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80" alt="T MAG num&eacute;ro sp&eacute;cial QVCT" loading="lazy">
+                    </div>
                     <div class="blog-card-content">
-                        <span class="blog-card-date">5 mai 2026</span>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-tag">Publication</span>
+                            <span class="blog-card-date">5 mai 2026</span>
+                        </div>
                         <h3 class="blog-card-title">T MAG #12 : dossier sp&eacute;cial QVCT</h3>
                         <p class="blog-card-excerpt">Le dernier num&eacute;ro de T MAG consacre un dossier complet &agrave; la Qualit&eacute; de Vie et aux Conditions de Travail.</p>
                         <a href="#" class="blog-card-link">Lire la suite &rarr;</a>
@@ -117,9 +166,9 @@
     </section>
 
     <!-- ========== NEWSLETTER CTA ========== -->
-    <section class="section section--light">
+    <section class="section section-light">
         <div class="container">
-            <div class="newsletter-block">
+            <div class="newsletter-block reveal">
                 <h2>Restez inform&eacute;</h2>
                 <p>Inscrivez-vous &agrave; T&nbsp;ACTU, notre newsletter, pour recevoir les derni&egrave;res actualit&eacute;s de TERRITORIA mutuelle.</p>
                 <form class="newsletter-form" action="#" method="post">
@@ -133,10 +182,16 @@
     <!-- ========== CTA BANNER ========== -->
     <section class="cta-banner">
         <div class="container">
-            <h2>Vous avez un sujet &agrave; nous proposer ?</h2>
-            <a href="contact.html" class="btn">Contactez-nous</a>
+            <h2 class="reveal">Vous avez un sujet &agrave; nous proposer ?</h2>
+            <p class="reveal">Partagez vos id&eacute;es et contribuez &agrave; la vie de notre communaut&eacute; mutualiste.</p>
+            <a href="contact.html" class="btn btn-white btn-lg reveal">
+                Contactez-nous
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
         </div>
     </section>
+
+    </main>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
@@ -144,8 +199,16 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="assets/img/logo.png" alt="TERRITORIA mutuelle" class="footer-logo">
-                    <p>Mutuelle de livre III<br>du Code de la Mutualit&eacute;</p>
+                    <p class="footer-desc">Mutuelle de livre III du Code de la Mutualit&eacute;, d&eacute;di&eacute;e &agrave; la pr&eacute;vention et au bien-&ecirc;tre des agents territoriaux.</p>
                     <p class="footer-group">Groupe APICIL</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Navigation</h4>
@@ -159,13 +222,30 @@
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
-                    <p>54 rue de Gabiel - CS 76016<br>79185 Chauray cedex</p>
-                    <p><a href="mailto:contact@territoriamutuelle.com">contact@territoriamutuelle.com</a></p>
+                    <ul>
+                        <li><a href="mailto:contact@territoriamutuelle.com">contact@territoriamutuelle.com</a></li>
+                        <li>54 rue Gabriel - CS 76016</li>
+                        <li>79185 Chauray cedex</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <div class="footer-newsletter">
+                        <p>Recevez T&nbsp;ACTU, nos derni&egrave;res actualit&eacute;s.</p>
+                        <form class="footer-newsletter-form" action="#" method="post">
+                            <input type="email" class="footer-newsletter-input" placeholder="Votre e-mail" required aria-label="Adresse e-mail">
+                            <button type="submit" class="footer-newsletter-btn">OK</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 TERRITORIA mutuelle. Tous droits r&eacute;serv&eacute;s.</p>
-                <a href="#">Mentions l&eacute;gales</a>
+                <div class="footer-legal">
+                    <a href="#">Mentions l&eacute;gales</a>
+                    <a href="#">Politique de confidentialit&eacute;</a>
+                    <a href="#">Accessibilit&eacute;</a>
+                </div>
             </div>
         </div>
     </footer>

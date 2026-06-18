@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos missions | TERRITORIA mutuelle</title>
-    <meta name="description" content="Découvrez les 5 axes d'action de TERRITORIA mutuelle : action sociale, conventions SQVCT, ancrage territorial, promotion de la santé et partenariats.">
+    <meta name="description" content="D&eacute;couvrez les 5 axes d'action de TERRITORIA mutuelle : action sociale, conventions SQVCT, ancrage territorial, promotion de la sant&eacute; et partenariats.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nos missions | TERRITORIA mutuelle">
+    <meta property="og:description" content="5 axes d'action au service de la pr&eacute;vention et du bien-&ecirc;tre des agents territoriaux.">
+    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Skip to content -->
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
 
     <!-- ========== HEADER ========== -->
     <header class="header" id="header">
@@ -27,31 +43,34 @@
                     <li><a href="contact.html" class="nav-link btn-nav">Nous contacter</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
+    <main id="main">
+
     <!-- ========== PAGE HERO ========== -->
     <section class="page-hero">
         <div class="container">
+            <div class="breadcrumb"><a href="index.html">Accueil</a> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> Nos missions</div>
             <h1>Nos missions</h1>
             <p class="page-hero-subtitle">5 axes fondateurs au service de la pr&eacute;vention et du bien-&ecirc;tre des agents territoriaux</p>
         </div>
     </section>
 
     <!-- ========== INTRO ========== -->
-    <section class="section">
+    <section class="section section-white">
         <div class="container">
-            <p class="intro-text">TERRITORIA mutuelle fonde ses actions sur 5 axes compl&eacute;mentaires, pour r&eacute;pondre de mani&egrave;re globale aux besoins des collectivit&eacute;s et de leurs agents en mati&egrave;re de pr&eacute;vention, sant&eacute; et qualit&eacute; de vie au travail.</p>
+            <p class="intro-text reveal">TERRITORIA mutuelle fonde ses actions sur 5 axes compl&eacute;mentaires, pour r&eacute;pondre de mani&egrave;re globale aux besoins des collectivit&eacute;s et de leurs agents en mati&egrave;re de pr&eacute;vention, sant&eacute; et qualit&eacute; de vie au travail.</p>
         </div>
     </section>
 
     <!-- ========== AXE 1 : ACTION SOCIALE ========== -->
     <section class="section section--alt" id="action-sociale">
         <div class="container">
-            <div class="mission-card" data-color="orange">
+            <div class="mission-card reveal" data-color="orange">
                 <div class="mission-card-header">
                     <span class="mission-number">01</span>
                     <div>
@@ -63,7 +82,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Prestations et accompagnements</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>TERRITORIA mutuelle propose des aides financi&egrave;res aux adh&eacute;rents souscripteurs d'un contrat Sant&eacute; et/ou Pr&eacute;voyance qui traversent des difficult&eacute;s. Ces prestations sont &eacute;tudi&eacute;es par la Commission Sociale Nationale, compos&eacute;e de 9 membres, qui examine chaque situation avec attention et bienveillance.</p>
@@ -72,7 +91,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Commission Sociale Nationale</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>La Commission Sociale Nationale est l'organe cl&eacute; de la solidarit&eacute; mutualiste. Compos&eacute;e de 9 membres, elle examine les demandes d'aide, &eacute;value les situations et d&eacute;cide des accompagnements &agrave; mettre en place. Son action incarne les valeurs fondamentales du mutualisme.</p>
@@ -81,7 +100,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Pour qui ?</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>L'action sociale s'adresse aux souscripteurs d'un contrat Sant&eacute; et/ou Pr&eacute;voyance TERRITORIA et &agrave; leurs ayants droit, dans les moments o&ugrave; un soutien financier ou un accompagnement sp&eacute;cifique est n&eacute;cessaire.</p>
@@ -93,9 +112,9 @@
     </section>
 
     <!-- ========== AXE 2 : CONVENTIONS PREVENTION SQVCT ========== -->
-    <section class="section" id="conventions">
+    <section class="section section-white" id="conventions">
         <div class="container">
-            <div class="mission-card" data-color="teal">
+            <div class="mission-card reveal" data-color="teal">
                 <div class="mission-card-header">
                     <span class="mission-number">02</span>
                     <div>
@@ -107,7 +126,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Le principe des conventions</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>TERRITORIA mutuelle propose aux collectivit&eacute;s des conventions &laquo;&nbsp;Pr&eacute;vention SQVCT&nbsp;&raquo; qui int&egrave;grent une enveloppe annuelle pouvant atteindre 1&nbsp;500&nbsp;&euro; d&eacute;di&eacute;e aux actions de pr&eacute;vention, &agrave; l'acc&egrave;s &agrave; l'Indice de Bien-&Ecirc;tre au Travail (IBET), &agrave; des formations sp&eacute;cialis&eacute;es, une veille documentaire et des ressources en pr&eacute;vention.</p>
@@ -116,7 +135,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Services inclus</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>Chaque convention comprend : une enveloppe annuelle pour des actions de pr&eacute;vention sur mesure, l'acc&egrave;s &agrave; l'IBET (Indice de Bien-&Ecirc;tre au Travail) pour mesurer et suivre le bien-&ecirc;tre des agents, des formations comme &laquo;&nbsp;Animateur &eacute;chauffement au travail&nbsp;&raquo;, une veille documentaire et des ressources en pr&eacute;vention sant&eacute;.</p>
@@ -125,7 +144,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Collectivit&eacute;s &eacute;ligibles</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>Les conventions Pr&eacute;vention SQVCT s'adressent prioritairement aux collectivit&eacute;s dites &laquo;&nbsp;grands comptes&nbsp;&raquo; et aux collectivit&eacute;s particuli&egrave;rement engag&eacute;es dans la pr&eacute;vention et la sant&eacute; au travail de leurs agents.</p>
@@ -139,7 +158,7 @@
     <!-- ========== AXE 3 : ANCRAGE TERRITORIAL ========== -->
     <section class="section section--alt" id="ancrage">
         <div class="container">
-            <div class="mission-card" data-color="blue">
+            <div class="mission-card reveal" data-color="blue">
                 <div class="mission-card-header">
                     <span class="mission-number">03</span>
                     <div>
@@ -151,7 +170,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Notre r&eacute;seau</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>TERRITORIA mutuelle s'appuie sur un r&eacute;seau de r&eacute;f&eacute;rents r&eacute;gionaux r&eacute;partis sur tout le territoire. Ces d&eacute;l&eacute;gu&eacute;s et correspondants sont le lien direct entre la mutuelle et les collectivit&eacute;s adh&eacute;rentes, assurant une pr&eacute;sence locale et une &eacute;coute attentive des besoins du terrain.</p>
@@ -160,7 +179,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Actions locales</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>Le r&eacute;seau militant organise et anime des actions locales : rencontres avec les agents, &eacute;v&eacute;nements de pr&eacute;vention, promotion de la marque TERRITORIA et de ses services aupr&egrave;s des collectivit&eacute;s de leur territoire.</p>
@@ -169,7 +188,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Partenariat CITer</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>TERRITORIA mutuelle entretient un partenariat avec CITer, constitu&eacute; de l'UNAAS.CT et de l'UNASAT, pour renforcer l'ancrage territorial et l'action au plus pr&egrave;s des r&eacute;alit&eacute;s locales.</p>
@@ -181,9 +200,9 @@
     </section>
 
     <!-- ========== AXE 4 : PROMOTION DE LA SANTE & FORMATION ========== -->
-    <section class="section" id="promotion-sante">
+    <section class="section section-white" id="promotion-sante">
         <div class="container">
-            <div class="mission-card" data-color="pink">
+            <div class="mission-card reveal" data-color="pink">
                 <div class="mission-card-header">
                     <span class="mission-number">04</span>
                     <div>
@@ -195,7 +214,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Formations et sensibilisations</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>TERRITORIA mutuelle propose un catalogue complet de prestations en formation et sensibilisation couvrant les th&eacute;matiques de pr&eacute;vention, sant&eacute; au travail et QVCT. Des formats vari&eacute;s sont propos&eacute;s : pr&eacute;sentiel, distanciel, webinaires CAP BIEN-&Ecirc;TRE, animations ludop&eacute;dagogiques.</p>
@@ -204,7 +223,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Ressources p&eacute;dagogiques</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>Nous cr&eacute;ons et mettons &agrave; disposition des ressources vari&eacute;es : podcasts, fiches pratiques, vid&eacute;os p&eacute;dagogiques, programmes de pr&eacute;vention sant&eacute;. Ces contenus permettent aux collectivit&eacute;s et &agrave; leurs agents d'acc&eacute;der &agrave; une information de qualit&eacute; sur les questions de sant&eacute; et bien-&ecirc;tre.</p>
@@ -213,7 +232,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Bilan Bien-&Ecirc;tre et Club Partenaires</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>En cours de d&eacute;veloppement, le Bilan Bien-&Ecirc;tre permettra aux agents d'&eacute;valuer leur situation globale. Le Club Partenaires et la conciergerie viendront compl&eacute;ter l'offre de services pour am&eacute;liorer le quotidien des agents.</p>
@@ -227,7 +246,7 @@
     <!-- ========== AXE 5 : COMMUNICATION & PARTENARIATS ========== -->
     <section class="section section--alt" id="communication">
         <div class="container">
-            <div class="mission-card" data-color="purple">
+            <div class="mission-card reveal" data-color="purple">
                 <div class="mission-card-header">
                     <span class="mission-number">05</span>
                     <div>
@@ -239,7 +258,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Partenariats institutionnels</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>Nous collaborons avec les grands acteurs de la fonction publique territoriale : ANDRHDT, SNDGCT, et d'autres organisations professionnelles. Ces partenariats renforcent notre l&eacute;gitimit&eacute; et notre capacit&eacute; d'action sur les questions de pr&eacute;vention et de sant&eacute; au travail.</p>
@@ -248,7 +267,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>Publications</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>TERRITORIA mutuelle &eacute;dite T&nbsp;MAG (magazine p&eacute;riodique) et T&nbsp;ACTU (newsletter d'actualit&eacute;s) pour informer ses adh&eacute;rents et partenaires sur les actualit&eacute;s de la pr&eacute;vention, de la sant&eacute; au travail et de la mutuelle.</p>
@@ -257,7 +276,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span>&Eacute;v&eacute;nements et inclusion</span>
-                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
                         </button>
                         <div class="accordion-content">
                             <p>Nous sommes pr&eacute;sents lors des colloques et congr&egrave;s majeurs de la fonction publique territoriale. Nous menons &eacute;galement des actions d'inclusion et de parrainage, t&eacute;moignant de notre engagement soci&eacute;tal au-del&agrave; de nos missions premi&egrave;res.</p>
@@ -271,10 +290,16 @@
     <!-- ========== CTA BANNER ========== -->
     <section class="cta-banner">
         <div class="container">
-            <h2>Pr&ecirc;t &agrave; agir pour la sant&eacute; et le bien-&ecirc;tre de vos agents ?</h2>
-            <a href="contact.html" class="btn">Contactez-nous</a>
+            <h2 class="reveal">Pr&ecirc;t &agrave; agir pour la sant&eacute; et le bien-&ecirc;tre de vos agents ?</h2>
+            <p class="reveal">D&eacute;couvrez comment TERRITORIA mutuelle peut accompagner votre collectivit&eacute; dans sa d&eacute;marche de pr&eacute;vention.</p>
+            <a href="contact.html" class="btn btn-white btn-lg reveal">
+                Contactez-nous
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
         </div>
     </section>
+
+    </main>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
@@ -282,8 +307,16 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="assets/img/logo.png" alt="TERRITORIA mutuelle" class="footer-logo">
-                    <p>Mutuelle de livre III<br>du Code de la Mutualit&eacute;</p>
+                    <p class="footer-desc">Mutuelle de livre III du Code de la Mutualit&eacute;, d&eacute;di&eacute;e &agrave; la pr&eacute;vention et au bien-&ecirc;tre des agents territoriaux.</p>
                     <p class="footer-group">Groupe APICIL</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Navigation</h4>
@@ -297,13 +330,30 @@
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
-                    <p>54 rue de Gabiel - CS 76016<br>79185 Chauray cedex</p>
-                    <p><a href="mailto:contact@territoriamutuelle.com">contact@territoriamutuelle.com</a></p>
+                    <ul>
+                        <li><a href="mailto:contact@territoriamutuelle.com">contact@territoriamutuelle.com</a></li>
+                        <li>54 rue Gabriel - CS 76016</li>
+                        <li>79185 Chauray cedex</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <div class="footer-newsletter">
+                        <p>Recevez T&nbsp;ACTU, nos derni&egrave;res actualit&eacute;s.</p>
+                        <form class="footer-newsletter-form" action="#" method="post">
+                            <input type="email" class="footer-newsletter-input" placeholder="Votre e-mail" required aria-label="Adresse e-mail">
+                            <button type="submit" class="footer-newsletter-btn">OK</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 TERRITORIA mutuelle. Tous droits r&eacute;serv&eacute;s.</p>
-                <a href="#">Mentions l&eacute;gales</a>
+                <div class="footer-legal">
+                    <a href="#">Mentions l&eacute;gales</a>
+                    <a href="#">Politique de confidentialit&eacute;</a>
+                    <a href="#">Accessibilit&eacute;</a>
+                </div>
             </div>
         </div>
     </footer>

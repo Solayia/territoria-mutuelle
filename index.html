@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TERRITORIA mutuelle | Prévention, santé et action sociale pour les collectivités</title>
-    <meta name="description" content="TERRITORIA mutuelle accompagne les collectivités territoriales et leurs agents en matière de prévention, promotion de la santé, QVCT et action sociale. Groupe APICIL.">
+    <title>TERRITORIA mutuelle | Pr&eacute;vention, sant&eacute; et action sociale pour les collectivit&eacute;s</title>
+    <meta name="description" content="TERRITORIA mutuelle accompagne les collectivit&eacute;s territoriales et leurs agents en mati&egrave;re de pr&eacute;vention, promotion de la sant&eacute;, QVCT et action sociale. Groupe APICIL.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TERRITORIA mutuelle | Pr&eacute;vention et sant&eacute; pour les collectivit&eacute;s">
+    <meta property="og:description" content="Accompagnement des collectivit&eacute;s territoriales en pr&eacute;vention, sant&eacute; au travail et QVCT. Groupe APICIL.">
+    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://territoriamutuelle.com/">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Skip to content -->
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
 
     <!-- ========== HEADER ========== -->
     <header class="header" id="header">
@@ -23,125 +42,302 @@
                     <li><a href="index.html" class="nav-link active">Accueil</a></li>
                     <li><a href="qui-sommes-nous.html" class="nav-link">Qui sommes-nous</a></li>
                     <li><a href="nos-missions.html" class="nav-link">Nos missions</a></li>
-                    <li><a href="blog.html" class="nav-link">Actualités</a></li>
+                    <li><a href="blog.html" class="nav-link">Actualit&eacute;s</a></li>
                     <li><a href="contact.html" class="nav-link btn-nav">Nous contacter</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
+    <main id="main">
+
     <!-- ========== HERO ========== -->
     <section class="hero">
-        <div class="container">
-            <h1>Prévention, santé et bien-être au service des territoires</h1>
-            <p class="hero-subtitle">TERRITORIA mutuelle accompagne les collectivités et leurs agents pour une meilleure qualité de vie au travail et une santé durable.</p>
-            <div class="hero-buttons">
-                <a href="nos-missions.html" class="btn btn-outline">Découvrir nos missions</a>
-                <a href="contact.html" class="btn hero-cta">Nous contacter</a>
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&q=80" alt="" loading="eager">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Mutuelle de livre III &mdash; Groupe APICIL
             </div>
+
+            <h1 class="hero-title">
+                Pr&eacute;vention, sant&eacute; et <span class="highlight">bien-&ecirc;tre</span> au service des territoires
+            </h1>
+
+            <p class="hero-subtitle">
+                TERRITORIA mutuelle accompagne les collectivit&eacute;s et leurs agents pour une meilleure qualit&eacute; de vie au travail et une sant&eacute; durable.
+            </p>
+
+            <div class="hero-ctas">
+                <a href="nos-missions.html" class="btn btn-white btn-lg">
+                    D&eacute;couvrir nos missions
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="contact.html" class="btn btn-outline-white btn-lg">Nous contacter</a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span>D&eacute;couvrir</span>
+            <div class="hero-scroll-line"></div>
         </div>
     </section>
 
-    <!-- ========== CHIFFRES CLES ========== -->
-    <section class="section figures-section">
+    <!-- ========== STATS BAR ========== -->
+    <section class="stats-section">
         <div class="container">
-            <div class="section-header">
-                <h2>TERRITORIA mutuelle en chiffres</h2>
-            </div>
-            <div class="figures-grid">
-                <div class="figure-item animate-on-scroll">
-                    <span class="figure-number" data-target="200000">+200 000</span>
-                    <p class="figure-label">adhérents</p>
-                </div>
-                <div class="figure-item animate-on-scroll">
-                    <span class="figure-number" data-target="7400">+7 400</span>
-                    <p class="figure-label">collectivités et établissements adhérents</p>
-                </div>
-                <div class="figure-item animate-on-scroll">
-                    <span class="figure-number" data-target="30">+30</span>
-                    <p class="figure-label">centres de gestion adhérents</p>
+            <div class="stats-container reveal-scale">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="200000">0</span>
+                        <p class="stat-label">adh&eacute;rents prot&eacute;g&eacute;s</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="7400">0</span>
+                        <p class="stat-label">collectivit&eacute;s adh&eacute;rentes</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="30">0</span>
+                        <p class="stat-label">centres de gestion</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="20">0</span>
+                        <p class="stat-label">ans d'exp&eacute;rience</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ========== 5 AXES D'ACTION ========== -->
-    <section class="section">
+    <section class="section section-white">
         <div class="container">
-            <div class="section-header">
-                <h2>Nos 5 axes d'action</h2>
-                <p>Une approche globale au service de la santé et du bien-être des agents territoriaux</p>
+            <div class="section-header reveal">
+                <span class="section-tag">Nos expertises</span>
+                <h2 class="section-title">5 axes d'action pour vos agents</h2>
+                <p class="section-subtitle">Une approche globale au service de la sant&eacute; et du bien-&ecirc;tre des agents territoriaux</p>
             </div>
-            <div class="cards-grid cards-grid--five">
 
-                <article class="mission-card animate-on-scroll" data-color="orange">
-                    <div class="mission-card-icon" aria-hidden="true">&#129309;</div>
+            <div class="cards-grid cards-grid-5">
+                <article class="feature-card reveal stagger-1" data-color="orange">
+                    <div class="feature-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
                     <h3>Action sociale</h3>
                     <p>Accompagnement financier et soutien solidaire pour les agents et leurs familles dans les moments difficiles.</p>
-                    <a href="nos-missions.html#action-sociale" class="mission-card-link">En savoir plus &rarr;</a>
+                    <a href="nos-missions.html#action-sociale" class="feature-card-link">En savoir plus &rarr;</a>
                 </article>
 
-                <article class="mission-card animate-on-scroll" data-color="teal">
-                    <div class="mission-card-icon" aria-hidden="true">&#128203;</div>
-                    <h3>Conventions Prévention SQVCT</h3>
-                    <p>Des partenariats sur mesure avec les collectivités pour des actions de prévention et de qualité de vie au travail.</p>
-                    <a href="nos-missions.html#conventions" class="mission-card-link">En savoir plus &rarr;</a>
+                <article class="feature-card reveal stagger-2" data-color="teal">
+                    <div class="feature-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h3>Conventions Pr&eacute;vention SQVCT</h3>
+                    <p>Des partenariats sur mesure avec les collectivit&eacute;s pour des actions de pr&eacute;vention et de QVCT.</p>
+                    <a href="nos-missions.html#conventions" class="feature-card-link">En savoir plus &rarr;</a>
                 </article>
 
-                <article class="mission-card animate-on-scroll" data-color="blue">
-                    <div class="mission-card-icon" aria-hidden="true">&#128506;</div>
+                <article class="feature-card reveal stagger-3" data-color="blue">
+                    <div class="feature-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
                     <h3>Ancrage territorial</h3>
-                    <p>Un réseau de délégués et correspondants présents sur tout le territoire pour une proximité réelle.</p>
-                    <a href="nos-missions.html#ancrage" class="mission-card-link">En savoir plus &rarr;</a>
+                    <p>Un r&eacute;seau de d&eacute;l&eacute;gu&eacute;s et correspondants pr&eacute;sents sur tout le territoire national.</p>
+                    <a href="nos-missions.html#ancrage" class="feature-card-link">En savoir plus &rarr;</a>
                 </article>
 
-                <article class="mission-card animate-on-scroll" data-color="pink">
-                    <div class="mission-card-icon" aria-hidden="true">&#127891;</div>
-                    <h3>Promotion de la santé &amp; Formation</h3>
-                    <p>Formations, sensibilisations et ressources pédagogiques pour promouvoir la santé au travail.</p>
-                    <a href="nos-missions.html#promotion-sante" class="mission-card-link">En savoir plus &rarr;</a>
+                <article class="feature-card reveal stagger-4" data-color="pink">
+                    <div class="feature-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                    <h3>Promotion de la sant&eacute; &amp; Formation</h3>
+                    <p>Formations, sensibilisations et ressources p&eacute;dagogiques pour la sant&eacute; au travail.</p>
+                    <a href="nos-missions.html#promotion-sante" class="feature-card-link">En savoir plus &rarr;</a>
                 </article>
 
-                <article class="mission-card animate-on-scroll" data-color="purple">
-                    <div class="mission-card-icon" aria-hidden="true">&#128226;</div>
+                <article class="feature-card reveal stagger-5" data-color="purple">
+                    <div class="feature-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
                     <h3>Communication &amp; Partenariats</h3>
-                    <p>Partenariats institutionnels, publications et présence événementielle pour porter la voix de la prévention.</p>
-                    <a href="nos-missions.html#communication" class="mission-card-link">En savoir plus &rarr;</a>
+                    <p>Partenariats institutionnels et pr&eacute;sence &eacute;v&eacute;nementielle pour porter la voix de la pr&eacute;vention.</p>
+                    <a href="nos-missions.html#communication" class="feature-card-link">En savoir plus &rarr;</a>
                 </article>
+            </div>
+        </div>
+    </section>
 
+    <!-- ========== A PROPOS — Split Layout ========== -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="about-split">
+                <div class="about-content reveal-left">
+                    <span class="section-tag">Notre engagement</span>
+                    <h2>Au service des collectivit&eacute;s depuis plus de 20 ans</h2>
+                    <p>TERRITORIA mutuelle est une mutuelle de livre III du Code de la Mutualit&eacute;, au sein du Groupe APICIL. Nous accompagnons les collectivit&eacute;s territoriales et leurs agents en mati&egrave;re de pr&eacute;vention, promotion de la sant&eacute;, QVCT et action sociale.</p>
+                    <p>En compl&eacute;mentarit&eacute; avec TERRITORIA pr&eacute;voyance, nous offrons une approche globale de la protection sociale aux agents territoriaux.</p>
+
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <div>
+                                <h4>Expertise reconnue</h4>
+                                <p>Sp&eacute;cialistes de la FPT</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <div>
+                                <h4>Proximit&eacute; terrain</h4>
+                                <p>R&eacute;f&eacute;rents r&eacute;gionaux</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <div>
+                                <h4>Groupe APICIL</h4>
+                                <p>3e groupe de protection sociale</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <div>
+                                <h4>Valeurs mutualistes</h4>
+                                <p>Solidarit&eacute; et entraide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image reveal-right">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="&Eacute;quipe TERRITORIA mutuelle en r&eacute;union" loading="lazy">
+                    <div class="about-float-card">
+                        <div>
+                            <span class="stat-number">+200 000</span>
+                            <p class="stat-label">adh&eacute;rents nous font confiance</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ========== POURQUOI TERRITORIA ========== -->
-    <section class="section section--light">
+    <section class="section section-white">
         <div class="container">
-            <div class="section-header">
-                <h2>Pourquoi TERRITORIA mutuelle ?</h2>
+            <div class="section-header reveal">
+                <span class="section-tag">Nos valeurs</span>
+                <h2 class="section-title">Pourquoi TERRITORIA mutuelle ?</h2>
+                <p class="section-subtitle">Qualit&eacute;, expertise et accompagnement au service de vos agents</p>
             </div>
             <div class="values-grid">
-                <div class="value-item animate-on-scroll">
-                    <div class="value-icon" aria-hidden="true">&#127919;</div>
+                <div class="value-card reveal stagger-1">
+                    <div class="value-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
                     <h3>Expertise</h3>
-                    <p>Plus de 20 ans d'expérience au service des collectivités territoriales et de leurs agents.</p>
+                    <p>Plus de 20 ans d'exp&eacute;rience au service des collectivit&eacute;s territoriales et de leurs agents.</p>
                 </div>
-                <div class="value-item animate-on-scroll">
-                    <div class="value-icon" aria-hidden="true">&#129330;</div>
-                    <h3>Proximité</h3>
-                    <p>Un réseau de délégués et correspondants présents sur l'ensemble du territoire national.</p>
+                <div class="value-card reveal stagger-2">
+                    <div class="value-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Proximit&eacute;</h3>
+                    <p>Un r&eacute;seau de r&eacute;f&eacute;rents r&eacute;gionaux sur l'ensemble du territoire national.</p>
                 </div>
-                <div class="value-item animate-on-scroll">
-                    <div class="value-icon" aria-hidden="true">&#128161;</div>
+                <div class="value-card reveal stagger-3">
+                    <div class="value-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
                     <h3>Accompagnement</h3>
-                    <p>Des solutions adaptées et un suivi personnalisé pour chaque collectivité.</p>
+                    <p>Des solutions adapt&eacute;es et un suivi personnalis&eacute; pour chaque collectivit&eacute;.</p>
                 </div>
-                <div class="value-item animate-on-scroll">
-                    <div class="value-icon" aria-hidden="true">&#10084;&#65039;</div>
-                    <h3>Solidarité</h3>
-                    <p>Une mutuelle engagée, fidèle aux valeurs mutualistes de solidarité et d'entraide.</p>
+                <div class="value-card reveal stagger-4">
+                    <div class="value-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h3>Solidarit&eacute;</h3>
+                    <p>Une mutuelle engag&eacute;e, fid&egrave;le aux valeurs mutualistes de solidarit&eacute; et d'entraide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TEMOIGNAGES ========== -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">T&eacute;moignages</span>
+                <h2 class="section-title">Ils nous font confiance</h2>
+                <p class="section-subtitle">Des collectivit&eacute;s satisfaites de notre accompagnement</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal stagger-1">
+                    <div class="testimonial-stars">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">&laquo; TERRITORIA mutuelle nous accompagne depuis plusieurs ann&eacute;es avec un professionnalisme remarquable. Leurs formations en pr&eacute;vention ont transform&eacute; notre approche du bien-&ecirc;tre au travail. &raquo;</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SL</div>
+                        <div>
+                            <p class="testimonial-name">Sophie L.</p>
+                            <p class="testimonial-role">DRH &mdash; Communaut&eacute; d'agglom&eacute;ration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal stagger-2">
+                    <div class="testimonial-stars">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">&laquo; Les webinaires CAP BIEN-&Ecirc;TRE et les animations ludop&eacute;dagogiques sont tr&egrave;s appr&eacute;ci&eacute;s par nos agents. Un vrai plus pour notre politique de pr&eacute;vention. &raquo;</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">PM</div>
+                        <div>
+                            <p class="testimonial-name">Philippe M.</p>
+                            <p class="testimonial-role">Directeur Pr&eacute;vention &mdash; Conseil d&eacute;partemental</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal stagger-3">
+                    <div class="testimonial-stars">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">&laquo; L'accompagnement personnalis&eacute; et la r&eacute;activit&eacute; de l'&eacute;quipe sont exemplaires. TERRITORIA mutuelle comprend parfaitement les enjeux de la fonction publique territoriale. &raquo;</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">CB</div>
+                        <div>
+                            <p class="testimonial-name">Claire B.</p>
+                            <p class="testimonial-role">Responsable QVCT &mdash; M&eacute;tropole</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,10 +346,16 @@
     <!-- ========== CTA BANNER ========== -->
     <section class="cta-banner">
         <div class="container">
-            <p>Vous êtes une collectivité ? Parlons de vos besoins en prévention et santé au travail.</p>
-            <a href="contact.html" class="btn">Contactez-nous</a>
+            <h2 class="reveal">Vous &ecirc;tes une collectivit&eacute; ?</h2>
+            <p class="reveal">Parlons de vos besoins en pr&eacute;vention, sant&eacute; au travail et qualit&eacute; de vie pour vos agents.</p>
+            <a href="contact.html" class="btn btn-white btn-lg reveal">
+                Contactez-nous
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
         </div>
     </section>
+
+    </main>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
@@ -161,8 +363,16 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="assets/img/logo.png" alt="TERRITORIA mutuelle" class="footer-logo">
-                    <p>Mutuelle de livre III<br>du Code de la Mutualité</p>
+                    <p class="footer-desc">Mutuelle de livre III du Code de la Mutualit&eacute;, d&eacute;di&eacute;e &agrave; la pr&eacute;vention et au bien-&ecirc;tre des agents territoriaux.</p>
                     <p class="footer-group">Groupe APICIL</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Navigation</h4>
@@ -170,23 +380,63 @@
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
                         <li><a href="nos-missions.html">Nos missions</a></li>
-                        <li><a href="blog.html">Actualités</a></li>
+                        <li><a href="blog.html">Actualit&eacute;s</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
-                    <p>54 rue de Gabiel - CS 76016<br>79185 Chauray cedex</p>
-                    <p><a href="mailto:contact@territoriamutuelle.com">contact@territoriamutuelle.com</a></p>
+                    <ul>
+                        <li><a href="mailto:contact@territoriamutuelle.com">contact@territoriamutuelle.com</a></li>
+                        <li>54 rue Gabriel - CS 76016</li>
+                        <li>79185 Chauray cedex</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <div class="footer-newsletter">
+                        <p>Recevez T&nbsp;ACTU, nos derni&egrave;res actualit&eacute;s.</p>
+                        <form class="footer-newsletter-form" action="#" method="post">
+                            <input type="email" class="footer-newsletter-input" placeholder="Votre e-mail" required aria-label="Adresse e-mail">
+                            <button type="submit" class="footer-newsletter-btn">OK</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 TERRITORIA mutuelle. Tous droits réservés.</p>
-                <a href="#">Mentions légales</a>
+                <p>&copy; 2026 TERRITORIA mutuelle. Tous droits r&eacute;serv&eacute;s.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions l&eacute;gales</a>
+                    <a href="#">Politique de confidentialit&eacute;</a>
+                    <a href="#">Accessibilit&eacute;</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TERRITORIA mutuelle",
+        "url": "https://territoriamutuelle.com",
+        "logo": "https://territoriamutuelle.com/assets/img/logo.png",
+        "description": "Mutuelle de livre III du Code de la Mutualit&eacute; d&eacute;di&eacute;e &agrave; la pr&eacute;vention et au bien-&ecirc;tre des agents des collectivit&eacute;s territoriales.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "54 rue Gabriel - CS 76016",
+            "addressLocality": "Chauray",
+            "postalCode": "79185",
+            "addressCountry": "FR"
+        },
+        "parentOrganization": {
+            "@type": "Organization",
+            "name": "Groupe APICIL"
+        }
+    }
+    </script>
 </body>
 </html>
