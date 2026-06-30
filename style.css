@@ -2410,17 +2410,25 @@ select.form-control {
   .header .nav-list {
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 20px;
   }
 
   .header .nav-link {
-    font-size: 1.15rem;
-    padding: 14px 28px;
+    display: block;
+    font-size: 1.2rem;
+    padding: 6px 28px;
+    text-align: center;
   }
 
   .header .nav-link.active::after { display: none; }
 
-  .header .btn-nav { margin-left: 0; margin-top: 8px; }
+  .header .btn-nav {
+    display: block;
+    margin-left: 0;
+    margin-top: 16px;
+    padding: 15px 44px;
+    font-size: 1rem;
+  }
 
   .section { padding: 72px 0; }
 
