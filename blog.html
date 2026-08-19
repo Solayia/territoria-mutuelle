@@ -38,7 +38,16 @@
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li><a href="qui-sommes-nous.html" class="nav-link">Qui sommes-nous</a></li>
-                    <li><a href="nos-missions.html" class="nav-link">Nos missions</a></li>
+                    <li class="nav-dropdown">
+                        <a href="nos-missions.html" class="nav-link">Nos missions</a>
+                        <ul class="nav-submenu">
+                            <li><a href="action-sociale.html">Action sociale</a></li>
+                            <li><a href="nos-missions.html#conventions">Convention Impulsion pr&eacute;vention</a></li>
+                            <li><a href="promotion-sante.html">Promotion de la sant&eacute; et formation</a></li>
+                            <li><a href="reseau-militant.html">R&eacute;seau militant</a></li>
+                            <li><a href="promotion-marque.html">Promotion de la marque et partenariats</a></li>
+                        </ul>
+                    </li>
                     <li><a href="blog.html" class="nav-link active">Actualit&eacute;s</a></li>
                     <li><a href="contact.html" class="nav-link btn-nav">Nous contacter</a></li>
                 </ul>
@@ -63,10 +72,47 @@
     <!-- ========== BLOG GRID ========== -->
     <section class="section section-white">
         <div class="container">
+            <div class="blog-filters reveal">
+                <div class="filter-group">
+                    <span class="filter-label">Th&eacute;matique</span>
+                    <div class="filter-chips" data-filter="theme">
+                        <button type="button" class="filter-chip active" data-value="all">Toutes</button>
+                        <button type="button" class="filter-chip" data-value="actualites">Actualit&eacute;s</button>
+                        <button type="button" class="filter-chip" data-value="qvct">QVCT</button>
+                        <button type="button" class="filter-chip" data-value="alimentation">Alimentation</button>
+                        <button type="button" class="filter-chip" data-value="activite-physique">Activit&eacute; physique</button>
+                        <button type="button" class="filter-chip" data-value="sante-mentale">Sant&eacute; mentale</button>
+                        <button type="button" class="filter-chip" data-value="sante-environnementale">Sant&eacute; environnementale</button>
+                        <button type="button" class="filter-chip" data-value="consommation">Consommation</button>
+                        <button type="button" class="filter-chip" data-value="sommeil">Sommeil</button>
+                        <button type="button" class="filter-chip" data-value="inclusion">Inclusion</button>
+                        <button type="button" class="filter-chip" data-value="securite">S&eacute;curit&eacute;</button>
+                        <button type="button" class="filter-chip" data-value="sedentarite">S&eacute;dentarit&eacute;</button>
+                        <button type="button" class="filter-chip" data-value="reseau-militant">R&eacute;seau militant</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Type</span>
+                    <div class="filter-chips" data-filter="type">
+                        <button type="button" class="filter-chip active" data-value="all">Tous</button>
+                        <button type="button" class="filter-chip" data-value="webinaire">Webinaire</button>
+                        <button type="button" class="filter-chip" data-value="article">Article</button>
+                        <button type="button" class="filter-chip" data-value="flyer">Flyer</button>
+                        <button type="button" class="filter-chip" data-value="affiche">Affiche</button>
+                        <button type="button" class="filter-chip" data-value="infographie">Infographie</button>
+                        <button type="button" class="filter-chip" data-value="guide">Guide</button>
+                        <button type="button" class="filter-chip" data-value="podcast">Podcast</button>
+                        <button type="button" class="filter-chip" data-value="video">Vid&eacute;o</button>
+                        <button type="button" class="filter-chip" data-value="web">Web</button>
+                        <button type="button" class="filter-chip" data-value="application">Application</button>
+                    </div>
+                </div>
+            </div>
+
             <div class="blog-grid">
 
                 <!-- Card 1 -->
-                <article class="blog-card reveal stagger-1">
+                <article class="blog-card reveal stagger-1" data-theme="qvct" data-type="webinaire">
                     <div class="blog-card-image">
                         <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=600&q=80" alt="Programme CAP BIEN-&Ecirc;TRE 2026" loading="lazy">
                     </div>
@@ -82,7 +128,7 @@
                 </article>
 
                 <!-- Card 2 -->
-                <article class="blog-card reveal stagger-2">
+                <article class="blog-card reveal stagger-2" data-theme="activite-physique" data-type="guide">
                     <div class="blog-card-image">
                         <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Pr&eacute;vention des TMS" loading="lazy">
                     </div>
@@ -98,7 +144,7 @@
                 </article>
 
                 <!-- Card 3 -->
-                <article class="blog-card reveal stagger-3">
+                <article class="blog-card reveal stagger-3" data-theme="actualites" data-type="article">
                     <div class="blog-card-image">
                         <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="Congr&egrave;s ANDRHDT" loading="lazy">
                     </div>
@@ -114,7 +160,7 @@
                 </article>
 
                 <!-- Card 4 -->
-                <article class="blog-card reveal stagger-1">
+                <article class="blog-card reveal stagger-1" data-theme="qvct" data-type="article">
                     <div class="blog-card-image">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Indice de Bien-&Ecirc;tre au Travail" loading="lazy">
                     </div>
@@ -130,7 +176,7 @@
                 </article>
 
                 <!-- Card 5 -->
-                <article class="blog-card reveal stagger-2">
+                <article class="blog-card reveal stagger-2" data-theme="sante-mentale" data-type="article">
                     <div class="blog-card-image">
                         <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=600&q=80" alt="Sant&eacute; mentale au travail" loading="lazy">
                     </div>
@@ -146,7 +192,7 @@
                 </article>
 
                 <!-- Card 6 -->
-                <article class="blog-card reveal stagger-3">
+                <article class="blog-card reveal stagger-3" data-theme="qvct" data-type="article">
                     <div class="blog-card-image">
                         <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80" alt="T MAG num&eacute;ro sp&eacute;cial QVCT" loading="lazy">
                     </div>
@@ -162,6 +208,7 @@
                 </article>
 
             </div>
+            <p class="blog-noresults" hidden>Aucune ressource ne correspond &agrave; ces filtres pour le moment.</p>
         </div>
     </section>
 
@@ -227,5 +274,32 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    (function(){
+        var chips=document.querySelectorAll('.filter-chip');
+        var cards=Array.prototype.slice.call(document.querySelectorAll('.blog-card'));
+        var noRes=document.querySelector('.blog-noresults');
+        var state={theme:'all',type:'all'};
+        function apply(){
+            var shown=0;
+            cards.forEach(function(card){
+                var okT=state.theme==='all'||card.getAttribute('data-theme')===state.theme;
+                var okY=state.type==='all'||card.getAttribute('data-type')===state.type;
+                var vis=okT&&okY; card.style.display=vis?'':'none'; if(vis)shown++;
+            });
+            if(noRes) noRes.hidden = shown>0;
+        }
+        chips.forEach(function(c){
+            c.addEventListener('click',function(){
+                var wrap=c.closest('.filter-chips'); var group=wrap.getAttribute('data-filter');
+                state[group]=c.getAttribute('data-value');
+                wrap.querySelectorAll('.filter-chip').forEach(function(x){x.classList.remove('active');});
+                c.classList.add('active');
+                apply();
+            });
+        });
+    })();
+    </script>
+
 </body>
 </html>
