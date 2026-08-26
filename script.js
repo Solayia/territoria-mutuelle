@@ -182,21 +182,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
-      const submitBtn = contactForm.querySelector('[type="submit"]');
-      if (submitBtn) {
-        submitBtn.textContent = 'Envoi en cours...';
-        submitBtn.disabled = true;
-      }
+      // Site statique : pas de back-end. On ouvre le logiciel de messagerie
+      // pré-rempli (mailto:). Aucun "message envoyé" n'est affiché tant que
+      // l'utilisateur n'a pas réellement envoyé son e-mail.
+      const val = (id) => {
+        const el = contactForm.querySelector(id);
+        return el ? el.value.trim() : '';
+      };
+      const objetSel = contactForm.querySelector('#objet');
+      const objet = (objetSel && objetSel.value)
+        ? objetSel.options[objetSel.selectedIndex].text
+        : 'Demande';
+      const lines = [
+        'Nom et prénom : ' + val('#nom'),
+        'Email : ' + val('#email'),
+        val('#telephone') ? 'Téléphone : ' + val('#telephone') : null,
+        val('#collectivite') ? 'Collectivité : ' + val('#collectivite') : null,
+        val('#fonction') ? 'Fonction : ' + val('#fonction') : null,
+        'Objet : ' + objet,
+        '',
+        val('#message')
+      ].filter((x) => x !== null);
+      const mailto = 'mailto:prevention@territoria-mutuelle.org'
+        + '?subject=' + encodeURIComponent('[Site TERRITORIA] ' + objet)
+        + '&body=' + encodeURIComponent(lines.join('\n'));
 
-      setTimeout(() => {
-        const success = document.getElementById('formSuccess');
-        if (success) success.classList.add('show');
-        contactForm.reset();
-        if (submitBtn) {
-          submitBtn.textContent = 'Envoyer votre message';
-          submitBtn.disabled = false;
-        }
-      }, 1500);
+      const note = document.getElementById('formSuccess');
+      if (note) note.classList.add('show');
+      window.location.href = mailto;
     });
   }
 
