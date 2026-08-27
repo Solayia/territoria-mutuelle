@@ -52,7 +52,7 @@
                     <li><a href="contact.html" class="nav-link btn-nav">Nous contacter</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -63,7 +63,7 @@
     <!-- ========== PAGE HERO ========== -->
     <section class="page-hero">
         <div class="container">
-            <div class="breadcrumb"><a href="index.html">Accueil</a> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> Actualit&eacute;s</div>
+            <div class="breadcrumb"><a href="index.html">Accueil</a> <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> Actualit&eacute;s</div>
             <h1>Actualit&eacute;s</h1>
             <p class="page-hero-subtitle">Retrouvez nos derni&egrave;res actualit&eacute;s, ressources et publications</p>
         </div>
@@ -123,7 +123,7 @@
             <p class="reveal">Partagez vos id&eacute;es et contribuez &agrave; la vie de notre communaut&eacute; mutualiste.</p>
             <a href="contact.html" class="btn btn-white btn-lg reveal">
                 Contactez-nous
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                <svg aria-hidden="true" focusable="false" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
         </div>
     </section>
@@ -187,7 +187,7 @@
               +'<span class="blog-card-tag">'+a.tag+'</span><span class="blog-card-date">'+a.dateLabel+'</span></div>'
               +'<h3 class="blog-card-title"><a href="'+href+'"'+ext+'>'+a.title+'</a></h3>'
               +'<p class="blog-card-excerpt">'+a.excerpt+'</p>'
-              +'<a href="'+href+'"'+ext+' class="blog-card-link">'+label+' &rarr;</a>'
+              +'<a href="'+href+'"'+ext+' class="blog-card-link" aria-label="'+esc(label+' : '+a.title)+'">'+label+' &rarr;</a>'
               +'</div></article>';
         }
         function render(){

@@ -52,7 +52,7 @@
                     <li><a href="contact.html" class="nav-link btn-nav active">Nous contacter</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -63,7 +63,7 @@
     <!-- ========== PAGE HERO ========== -->
     <section class="page-hero">
         <div class="container">
-            <div class="breadcrumb"><a href="index.html">Accueil</a> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> Contact</div>
+            <div class="breadcrumb"><a href="index.html">Accueil</a> <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> Contact</div>
             <h1>Contactez-nous</h1>
             <p class="page-hero-subtitle">Une question, un besoin concernant l'action sociale, la pr&eacute;vention et la promotion de la sant&eacute; ou la QVCT ? Notre &eacute;quipe est &agrave; votre &eacute;coute.</p>
         </div>
@@ -78,31 +78,33 @@
                 <div class="reveal">
                     <form class="contact-form" id="contactForm" novalidate>
 
+                        <p class="form-note">Les champs suivis d'un <span class="required">*</span> sont obligatoires.</p>
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="nom">Nom et Pr&eacute;nom <span class="required">*</span></label>
-                                <input type="text" id="nom" name="nom" class="form-control" placeholder="Votre nom et pr&eacute;nom" required>
+                                <input type="text" id="nom" name="nom" class="form-control" placeholder="Votre nom et pr&eacute;nom" autocomplete="name" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="votre.email@exemple.fr" required>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="votre.email@exemple.fr" autocomplete="email" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="telephone">T&eacute;l&eacute;phone</label>
-                                <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="06 00 00 00 00">
+                                <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="06 00 00 00 00" autocomplete="tel">
                             </div>
                             <div class="form-group">
                                 <label for="collectivite">Collectivit&eacute; / Organisation</label>
-                                <input type="text" id="collectivite" name="collectivite" class="form-control" placeholder="Nom de votre collectivit&eacute;">
+                                <input type="text" id="collectivite" name="collectivite" class="form-control" placeholder="Nom de votre collectivit&eacute;" autocomplete="organization">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="fonction">Fonction</label>
-                            <input type="text" id="fonction" name="fonction" class="form-control" placeholder="Votre fonction">
+                            <input type="text" id="fonction" name="fonction" class="form-control" placeholder="Votre fonction" autocomplete="organization-title">
                         </div>
 
                         <div class="form-group">
@@ -125,11 +127,11 @@
                         <div class="form-submit">
                             <button type="submit" class="btn btn-primary">
                                 Envoyer votre message
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                <svg aria-hidden="true" focusable="false" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                             </button>
                         </div>
 
-                        <div class="form-success" id="formSuccess">
+                        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
                             Votre logiciel de messagerie va s'ouvrir pour finaliser l'envoi &agrave; prevention@territoria-mutuelle.org. Si rien ne se passe, &eacute;crivez-nous directement &agrave; cette adresse.
                         </div>
                     </form>
@@ -140,7 +142,7 @@
                     <div class="contact-info-card">
                         <div class="contact-info-item">
                             <div class="contact-info-icon" aria-hidden="true">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             </div>
                             <div class="contact-info-text">
                                 <h4>Adresse</h4>
@@ -149,7 +151,7 @@
                         </div>
                         <div class="contact-info-item">
                             <div class="contact-info-icon" aria-hidden="true">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             </div>
                             <div class="contact-info-text">
                                 <h4>Email</h4>

@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('open');
       nav.classList.toggle('open');
-      document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
-      menuToggle.setAttribute('aria-label',
-        nav.classList.contains('open') ? 'Fermer le menu' : 'Ouvrir le menu'
-      );
+      const isOpen = nav.classList.contains('open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
     });
 
     nav.querySelectorAll('.nav-link').forEach(link => {
@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.classList.remove('open');
         nav.classList.remove('open');
         document.body.style.overflow = '';
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Ouvrir le menu');
       });
     });
 
@@ -42,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.classList.remove('open');
         nav.classList.remove('open');
         document.body.style.overflow = '';
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Ouvrir le menu');
       }
     });
   }

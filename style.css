@@ -1420,7 +1420,7 @@ p { line-height: 1.75; }
 
 .footer-bottom p {
   font-size: 0.82rem;
-  opacity: 0.35;
+  opacity: 0.7;
 }
 
 .footer-legal {
@@ -1430,12 +1430,12 @@ p { line-height: 1.75; }
 
 .footer-legal a {
   font-size: 0.82rem;
-  opacity: 0.35;
+  opacity: 0.7;
   transition: opacity var(--duration);
 }
 
 .footer-legal a:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* ============================================
@@ -2162,7 +2162,7 @@ p { line-height: 1.75; }
 
 .blog-card-date {
   font-size: 0.8rem;
-  color: var(--gray-400);
+  color: var(--gray-500);
   font-weight: 500;
 }
 
@@ -2849,3 +2849,28 @@ select.form-control {
   .stats-grid { grid-template-columns: 1fr; }
   .page-hero h1 { font-size: 1.5rem; }
 }
+
+/* ============================================
+   ACCESSIBILITÉ — Focus clavier visible (RGAA 10.7)
+   ============================================ */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* Contextes sombres / rouges : anneau blanc pour rester perceptible */
+.hero :focus-visible,
+.page-hero :focus-visible,
+.cta-banner :focus-visible,
+.cta-banner-inner :focus-visible,
+.footer :focus-visible,
+.btn-primary:focus-visible,
+.btn-nav:focus-visible,
+.filter-chip.active:focus-visible {
+  outline-color: #ffffff;
+  outline-offset: 3px;
+}
+
+/* Mention champs obligatoires (formulaire) */
+.form-note { font-size: 0.85rem; color: var(--gray-600); margin-bottom: 20px; }
+.form-note .required { color: var(--primary); font-weight: 700; }
