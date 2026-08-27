@@ -34,7 +34,7 @@
             <a href="index.html" class="logo">
                 <img src="assets/img/logo.png" alt="TERRITORIA mutuelle - Groupe APICIL">
             </a>
-            <nav class="nav" id="nav">
+            <nav class="nav" id="nav" aria-label="Menu principal">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li><a href="qui-sommes-nous.html" class="nav-link">Qui sommes-nous</a></li>
@@ -49,7 +49,7 @@
                         </ul>
                     </li>
                     <li><a href="blog.html" class="nav-link">Actualit&eacute;s</a></li>
-                    <li><a href="contact.html" class="nav-link btn-nav active">Nous contacter</a></li>
+                    <li><a href="contact.html" class="nav-link btn-nav active" aria-current="page">Nous contacter</a></li>
                 </ul>
             </nav>
             <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
@@ -63,7 +63,7 @@
     <!-- ========== PAGE HERO ========== -->
     <section class="page-hero">
         <div class="container">
-            <div class="breadcrumb"><a href="index.html">Accueil</a> <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> Contact</div>
+            <nav class="breadcrumb" aria-label="Fil d\'Ariane"><a href="index.html">Accueil</a> <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> Contact</nav>
             <h1>Contactez-nous</h1>
             <p class="page-hero-subtitle">Une question, un besoin concernant l'action sociale, la pr&eacute;vention et la promotion de la sant&eacute; ou la QVCT ? Notre &eacute;quipe est &agrave; votre &eacute;coute.</p>
         </div>
@@ -76,6 +76,7 @@
 
                 <!-- Left Column: Form -->
                 <div class="reveal">
+                    <h2 class="visually-hidden">Formulaire de contact</h2>
                     <form class="contact-form" id="contactForm" novalidate>
 
                         <p class="form-note">Les champs suivis d'un <span class="required">*</span> sont obligatoires.</p>
@@ -139,13 +140,14 @@
 
                 <!-- Right Column: Contact Info -->
                 <div class="reveal">
+                    <h2 class="visually-hidden">Nos coordonn&eacute;es</h2>
                     <div class="contact-info-card">
                         <div class="contact-info-item">
                             <div class="contact-info-icon" aria-hidden="true">
                                 <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             </div>
                             <div class="contact-info-text">
-                                <h4>Adresse</h4>
+                                <h3>Adresse</h3>
                                 <p>54 rue Gabriel - CS 76016<br>79185 Chauray cedex</p>
                             </div>
                         </div>
@@ -154,7 +156,7 @@
                                 <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             </div>
                             <div class="contact-info-text">
-                                <h4>Email</h4>
+                                <h3>Email</h3>
                                 <p><a href="mailto:prevention@territoria-mutuelle.org">prevention@territoria-mutuelle.org</a></p>
                             </div>
                         </div>
@@ -162,7 +164,7 @@
 
                     <!-- Renvoi TERRITORIA pr&eacute;voyance -->
                     <div class="contact-note reveal">
-                        <h4>Vous avez un contrat sant&eacute; ou pr&eacute;voyance ?</h4>
+                        <h3>Vous avez un contrat sant&eacute; ou pr&eacute;voyance ?</h3>
                         <p>Pour toute question relative &agrave; un contrat sant&eacute; ou pr&eacute;voyance, nous vous invitons &agrave; vous rapprocher de TERRITORIA pr&eacute;voyance.</p>
                         <a href="https://www.territoria.fr/aide-et-contacts/" class="contact-note-link" target="_blank" rel="noopener">Aide et contacts TERRITORIA pr&eacute;voyance &rarr;</a>
                     </div>
@@ -189,7 +191,7 @@
                     <p class="footer-group">Groupe APICIL</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
+                    <h2>Navigation</h2>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
@@ -199,7 +201,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h2>Contact</h2>
                     <ul>
                         <li><a href="mailto:prevention@territoria-mutuelle.org">prevention@territoria-mutuelle.org</a></li>
                         <li>54 rue Gabriel - CS 76016</li>
@@ -210,8 +212,9 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 TERRITORIA mutuelle. Tous droits r&eacute;serv&eacute;s.</p>
                 <div class="footer-legal">
-                    <a href="#">Mentions l&eacute;gales</a>
-                    <a href="#">Politique de confidentialit&eacute;</a>
+                    <a href="mentions-legales.html">Mentions l&eacute;gales</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialit&eacute;</a>
+                    <a href="accessibilite.html">Accessibilit&eacute;</a>
                 </div>
             </div>
         </div>

@@ -169,22 +169,45 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = contactForm.querySelector('#email');
       const message = contactForm.querySelector('#message');
       let valid = true;
+      let firstInvalid = null;
 
-      [nom, email, message].forEach(field => {
-        if (field && !field.value.trim()) {
-          field.style.borderColor = '#C8102E';
-          valid = false;
-        } else if (field) {
-          field.style.borderColor = '';
+      // Message d'erreur texte associé au champ (RGAA 11.10)
+      const setError = (el, msg) => {
+        if (!el) return;
+        let err = document.getElementById(el.id + '-error');
+        if (!err) {
+          err = document.createElement('span');
+          err.id = el.id + '-error';
+          err.className = 'field-error';
+          el.insertAdjacentElement('afterend', err);
         }
-      });
+        if (msg) {
+          err.textContent = msg;
+          err.classList.add('show');
+          el.setAttribute('aria-invalid', 'true');
+          el.setAttribute('aria-describedby', err.id);
+          if (!firstInvalid) firstInvalid = el;
+          valid = false;
+        } else {
+          err.textContent = '';
+          err.classList.remove('show');
+          el.removeAttribute('aria-invalid');
+          el.removeAttribute('aria-describedby');
+        }
+      };
 
-      if (email && email.value && !email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-        email.style.borderColor = '#C8102E';
-        valid = false;
+      const emailOk = email && email.value.trim() &&
+        email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+      setError(nom, !nom.value.trim() ? 'Veuillez saisir votre nom et prénom.' : null);
+      setError(email, !email.value.trim()
+        ? 'Veuillez saisir votre adresse e-mail.'
+        : (!emailOk ? 'Veuillez saisir une adresse e-mail valide (ex. : nom@exemple.fr).' : null));
+      setError(message, !message.value.trim() ? 'Veuillez saisir votre message.' : null);
+
+      if (!valid) {
+        if (firstInvalid) firstInvalid.focus();
+        return;
       }
-
-      if (!valid) return;
 
       // Site statique : pas de back-end. On ouvre le logiciel de messagerie
       // pré-rempli (mailto:). Aucun "message envoyé" n'est affiché tant que

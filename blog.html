@@ -34,7 +34,7 @@
             <a href="index.html" class="logo">
                 <img src="assets/img/logo.png" alt="TERRITORIA mutuelle - Groupe APICIL">
             </a>
-            <nav class="nav" id="nav">
+            <nav class="nav" id="nav" aria-label="Menu principal">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li><a href="qui-sommes-nous.html" class="nav-link">Qui sommes-nous</a></li>
@@ -48,7 +48,7 @@
                             <li><a href="promotion-marque.html">Promotion de la marque et partenariats</a></li>
                         </ul>
                     </li>
-                    <li><a href="blog.html" class="nav-link active">Actualit&eacute;s</a></li>
+                    <li><a href="blog.html" class="nav-link active" aria-current="page">Actualit&eacute;s</a></li>
                     <li><a href="contact.html" class="nav-link btn-nav">Nous contacter</a></li>
                 </ul>
             </nav>
@@ -63,7 +63,7 @@
     <!-- ========== PAGE HERO ========== -->
     <section class="page-hero">
         <div class="container">
-            <div class="breadcrumb"><a href="index.html">Accueil</a> <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> Actualit&eacute;s</div>
+            <nav class="breadcrumb" aria-label="Fil d\'Ariane"><a href="index.html">Accueil</a> <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> Actualit&eacute;s</nav>
             <h1>Actualit&eacute;s</h1>
             <p class="page-hero-subtitle">Retrouvez nos derni&egrave;res actualit&eacute;s, ressources et publications</p>
         </div>
@@ -72,6 +72,7 @@
     <!-- ========== BLOG GRID ========== -->
     <section class="section section-white">
         <div class="container">
+            <h2 class="visually-hidden">Nos actualit&eacute;s et ressources</h2>
             <div class="blog-filters reveal">
                 <div class="filter-group">
                     <span class="filter-label">Th&eacute;matique</span>
@@ -140,7 +141,7 @@
                     <p class="footer-group">Groupe APICIL</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
+                    <h2>Navigation</h2>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
@@ -150,7 +151,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h2>Contact</h2>
                     <ul>
                         <li><a href="mailto:prevention@territoria-mutuelle.org">prevention@territoria-mutuelle.org</a></li>
                         <li>54 rue Gabriel - CS 76016</li>
@@ -161,8 +162,9 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 TERRITORIA mutuelle. Tous droits r&eacute;serv&eacute;s.</p>
                 <div class="footer-legal">
-                    <a href="#">Mentions l&eacute;gales</a>
-                    <a href="#">Politique de confidentialit&eacute;</a>
+                    <a href="mentions-legales.html">Mentions l&eacute;gales</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialit&eacute;</a>
+                    <a href="accessibilite.html">Accessibilit&eacute;</a>
                 </div>
             </div>
         </div>
