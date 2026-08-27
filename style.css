@@ -2903,3 +2903,15 @@ select.form-control {
 .field-error::before {
   content: "⚠"; font-size: 0.9em;
 }
+
+/* RGAA 10.6 : liens identifiables au sein du texte (soulignement) */
+.prose-section p a,
+.prose-section li a,
+#articleBody a:not(.download-link),
+.info-banner a,
+.mission-block a,
+.contact-note p a,
+.lead a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
