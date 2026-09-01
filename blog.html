@@ -206,6 +206,12 @@
                 c.classList.add('active'); render();
             });
         });
+        // Tant qu'aucune actualité n'est publiée, on masque les filtres pour un
+        // état vide propre (ils réapparaissent dès qu'un contenu est ajouté).
+        if(!(window.ARTICLES||[]).length){
+            var fb=document.querySelector('.blog-filters');
+            if(fb) fb.style.display='none';
+        }
         render();
     })();
     </script>
