@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Offre de formation TERRITORIA mutuelle">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#C8102E"/>
+      <stop offset="1" stop-color="#8f0a20"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2">
+    <circle cx="1330" cy="180" r="260"/>
+    <circle cx="1330" cy="180" r="180"/>
+    <circle cx="220" cy="760" r="200"/>
+  </g>
+  <g transform="translate(140,330)" fill="#ffffff">
+    <g stroke="#ffffff" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 70 L150 20 L280 70 L150 120 Z"/>
+      <path d="M80 96 V150 C80 175 220 175 220 150 V96"/>
+      <line x1="280" y1="70" x2="280" y2="140"/>
+    </g>
+    <text x="0" y="255" font-family="Poppins, Arial, sans-serif" font-size="72" font-weight="700">Offre de formation</text>
+    <text x="0" y="330" font-family="Inter, Arial, sans-serif" font-size="40" fill-opacity="0.9">Prévention &amp; qualité de vie au travail</text>
+    <text x="0" y="470" font-family="Poppins, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="1">TERRITORIA mutuelle</text>
+  </g>
+</svg>
