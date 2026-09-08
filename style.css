@@ -1891,14 +1891,14 @@ p { line-height: 1.75; }
 /* ============================================
    PAGES DÉDIÉES — contenu "prose"
    ============================================ */
-.prose { max-width: 840px; margin: 0 auto; }
+.prose { max-width: 720px; margin: 0 auto; }
 .prose > .lead {
   font-size: 1.15rem;
   color: var(--gray-700);
   line-height: 1.8;
   margin-bottom: 8px;
 }
-.prose-section { margin-top: 44px; }
+.prose-section { margin-top: 52px; }
 .prose-section > h2 {
   font-size: clamp(1.35rem, 3vw, 1.8rem);
   font-weight: 700;
@@ -1911,11 +1911,23 @@ p { line-height: 1.75; }
   color: var(--gray-900);
   margin: 26px 0 10px;
 }
-.prose-section p { color: var(--gray-600); line-height: 1.85; margin-bottom: 14px; }
+.prose-section p { color: var(--gray-600); line-height: 1.8; margin-bottom: 18px; }
 .prose-section ul { margin: 4px 0 18px; padding-left: 20px; }
-.prose-section li { color: var(--gray-600); line-height: 1.75; margin-bottom: 7px; }
+.prose-section li { color: var(--gray-600); line-height: 1.75; margin-bottom: 9px; }
 .prose-section a { color: var(--primary); font-weight: 500; }
 .prose-section a:hover { color: var(--primary-dark); }
+
+/* Paragraphes « terme : description » -> lignes scannables (au lieu d'un mur) */
+.prose-section p:has(> strong:first-child) {
+  margin: 0 0 10px;
+  padding: 13px 18px;
+  background: var(--gray-50);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 10px 10px 0;
+  line-height: 1.65;
+  color: var(--gray-700);
+}
+.prose-section p:has(> strong:first-child) strong { color: var(--gray-900); }
 
 .prose-card {
   background: var(--white);
