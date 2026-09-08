@@ -1,0 +1,69 @@
+# ============================================================
+#  TERRITORIA mutuelle — configuration Hostinger (Apache/LiteSpeed)
+#  Ce fichier est ignoré par GitHub Pages ; il s'active une fois
+#  le site déposé dans public_html sur Hostinger.
+# ============================================================
+
+# ---------- 1. Forcer HTTPS + domaine canonique (sans www) ----------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # http -> https
+  RewriteCond %{HTTPS} off [OR]
+  # www -> sans www
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://territoriamutuelle.com%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# ---------- 2. Compression (Brotli si dispo, sinon Gzip) ----------
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml application/xml
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+# ---------- 3. Cache navigateur (assets versionnés via ?v=) ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML : pas de cache long (contenu qui évolue)
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # CSS / JS : 1 an (le paramètre ?v= gère l'invalidation)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+
+  # Images : 1 an
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Polices : 1 an
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/pdf "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Cache immuable pour les fichiers statiques (hors HTML)
+  <FilesMatch "\.(css|js|webp|jpg|jpeg|png|svg|woff2|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+
+  # ---------- 4. En-têtes de sécurité ----------
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ---------- 5. Type MIME correct pour les polices/webp (au cas où) ----------
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/webp .webp
+</IfModule>
