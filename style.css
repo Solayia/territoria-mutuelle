@@ -1928,6 +1928,31 @@ p { line-height: 1.75; }
 }
 .prose-card h3 { margin-top: 0; }
 
+/* Galerie photos illustrative (pages missions) */
+.mission-gallery {
+  margin: 32px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.mission-gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+  box-shadow: var(--shadow-sm);
+}
+.mission-gallery figcaption {
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+@media (max-width: 700px) {
+  .mission-gallery { grid-template-columns: 1fr; gap: 12px; }
+}
+
 /* Bandeau d'information (offre en cours) */
 .info-banner {
   display: flex;
