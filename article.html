@@ -15,11 +15,66 @@
     <meta property="og:image" content="assets/img/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://territoriamutuelle.com/assets/img/logo.png">
+
+    <!-- Canonical (mis à jour dynamiquement selon l'article) -->
+    <link rel="canonical" href="https://territoriamutuelle.com/blog.html">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="assets/fonts/fonts.css?v=20260908">
 
     <link rel="stylesheet" href="style.css?v=20260908">
+    <!-- JSON-LD (données structurées) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://territoriamutuelle.com/#organization",
+      "name": "TERRITORIA mutuelle",
+      "legalName": "TERRITORIA mutuelle",
+      "url": "https://territoriamutuelle.com/",
+      "logo": "https://territoriamutuelle.com/assets/img/logo.png",
+      "image": "https://territoriamutuelle.com/assets/img/logo.png",
+      "description": "Mutuelle de livre III du Code de la mutualité, dédiée à la prévention, la promotion de la santé, la qualité de vie et des conditions de travail (QVCT) et l'action sociale pour les collectivités territoriales et leurs agents.",
+      "disambiguatingDescription": "TERRITORIA mutuelle, centrée sur la prévention et la promotion de la santé, est distincte de TERRITORIA prévoyance, qui pilote les contrats santé et prévoyance. Les deux entités partagent la marque TERRITORIA au sein du groupe APICIL.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Groupe APICIL",
+        "url": "https://www.groupe-apicil.com/"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "54 rue Gabriel - CS 76016",
+        "postalCode": "79185",
+        "addressLocality": "Chauray",
+        "addressCountry": "FR"
+      },
+      "email": "prevention@territoria-mutuelle.org",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "SIREN",
+        "value": "483041307"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      },
+      "knowsAbout": [
+        "prévention en santé",
+        "promotion de la santé",
+        "qualité de vie et conditions de travail (QVCT)",
+        "action sociale",
+        "collectivités territoriales",
+        "fonction publique territoriale",
+        "agents territoriaux"
+      ]
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
@@ -137,6 +192,26 @@
         var img=document.getElementById('articleImage');
         if(a.image){img.src=a.image; img.alt=a.title; img.hidden=false;}
         body.innerHTML=a.body||'';
+
+        // Mise à jour du canonical + données structurées Article (SEO / IA)
+        var base='https://territoriamutuelle.com/';
+        var pageUrl=base+'article.html?id='+encodeURIComponent(a.id);
+        var can=document.querySelector('link[rel="canonical"]'); if(can) can.setAttribute('href',pageUrl);
+        function txt(h){var d=document.createElement('div');d.innerHTML=h||'';return (d.textContent||'').replace(/\s+/g,' ').trim();}
+        var imgUrl=a.image&&a.image.indexOf('data:')!==0 ? (a.image.indexOf('http')===0?a.image:base+a.image) : base+'assets/img/logo.png';
+        var ld={"@context":"https://schema.org","@type":"NewsArticle",
+            "headline":txt(a.title),
+            "description":txt(a.excerpt),
+            "datePublished":a.dateISO||undefined,
+            "dateModified":a.dateISO||undefined,
+            "image":[imgUrl],
+            "inLanguage":"fr-FR",
+            "mainEntityOfPage":{"@type":"WebPage","@id":pageUrl},
+            "author":{"@type":"Organization","name":"TERRITORIA mutuelle","url":base},
+            "publisher":{"@type":"Organization","name":"TERRITORIA mutuelle","logo":{"@type":"ImageObject","url":base+"assets/img/logo.png"}}
+        };
+        var sc=document.createElement('script'); sc.type='application/ld+json';
+        sc.textContent=JSON.stringify(ld); document.head.appendChild(sc);
     })();
     </script>
 </body>
