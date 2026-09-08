@@ -16,6 +16,9 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://territoriamutuelle.com/blog.html">
+
     <!-- Fonts -->
     <link rel="stylesheet" href="assets/fonts/fonts.css?v=20260908">
 
@@ -206,12 +209,33 @@
                 c.classList.add('active'); render();
             });
         });
-        // Tant qu'aucune actualité n'est publiée, on masque les filtres pour un
-        // état vide propre (ils réapparaissent dès qu'un contenu est ajouté).
-        if(!(window.ARTICLES||[]).length){
-            var fb=document.querySelector('.blog-filters');
-            if(fb) fb.style.display='none';
-        }
+        // Adapte les filtres au contenu réellement publié :
+        // - aucun article -> on masque toute la barre de filtres ;
+        // - sinon, on masque les puces sans article, et un groupe de filtres
+        //   entier s'il ne reste qu'une seule valeur (filtre inutile).
+        (function(){
+            var arts=window.ARTICLES||[];
+            var bar=document.querySelector('.blog-filters');
+            if(!bar) return;
+            if(!arts.length){ bar.style.display='none'; return; }
+            var present={theme:{},type:{}};
+            arts.forEach(function(a){ present.theme[a.theme]=1; present.type[a.type]=1; });
+            document.querySelectorAll('.filter-chips').forEach(function(wrap){
+                var dim=wrap.getAttribute('data-filter'); // 'theme' | 'type'
+                var kept=0;
+                wrap.querySelectorAll('.filter-chip').forEach(function(c){
+                    var v=c.getAttribute('data-value');
+                    if(v==='all') return;
+                    if(present[dim][v]){ kept++; }
+                    else { c.style.display='none'; }
+                });
+                // si 0 ou 1 valeur réelle, le groupe entier n'a pas d'intérêt
+                if(kept<=1){
+                    var grp=wrap.closest('.filter-group');
+                    if(grp) grp.style.display='none';
+                }
+            });
+        })();
         render();
     })();
     </script>
