@@ -2935,3 +2935,28 @@ select.form-control {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* ===== Cartes mission avec visuel latéral (page récap Nos missions) ===== */
+.mission-card--media {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  padding: 0;
+  overflow: hidden;
+  align-items: stretch;
+}
+.mission-card--media .mission-card-media { margin: 0; display: block; }
+.mission-card--media .mission-card-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  display: block;
+}
+.mission-card--media .mission-card-main { padding: 44px 44px; }
+.mission-card--media.reverse .mission-card-media { order: 2; }
+@media (max-width: 860px) {
+  .mission-card--media { grid-template-columns: 1fr; padding: 0; }
+  .mission-card--media.reverse .mission-card-media { order: 0; }
+  .mission-card--media .mission-card-media img { min-height: 200px; max-height: 280px; }
+  .mission-card--media .mission-card-main { padding: 30px 26px; }
+}
