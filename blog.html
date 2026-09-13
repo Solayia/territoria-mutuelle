@@ -145,37 +145,30 @@
             <h2 class="visually-hidden">Nos actualit&eacute;s et ressources</h2>
             <div class="blog-filters reveal">
                 <div class="filter-group">
-                    <span class="filter-label">Th&eacute;matique</span>
-                    <div class="filter-chips" data-filter="theme">
-                        <button type="button" class="filter-chip active" data-value="all">Toutes</button>
-                        <button type="button" class="filter-chip" data-value="actualites">Actualit&eacute;s</button>
-                        <button type="button" class="filter-chip" data-value="qvct"><abbr title="Qualité de Vie et Conditions de Travail">QVCT</abbr></button>
-                        <button type="button" class="filter-chip" data-value="alimentation">Alimentation</button>
-                        <button type="button" class="filter-chip" data-value="activite-physique">Activit&eacute; physique et sportive</button>
-                        <button type="button" class="filter-chip" data-value="sante-mentale">Sant&eacute; mentale</button>
-                        <button type="button" class="filter-chip" data-value="sante-environnementale">Sant&eacute; environnementale</button>
-                        <button type="button" class="filter-chip" data-value="consommation">Consommation</button>
-                        <button type="button" class="filter-chip" data-value="sommeil">Sommeil</button>
-                        <button type="button" class="filter-chip" data-value="inclusion">Inclusion</button>
-                        <button type="button" class="filter-chip" data-value="securite">S&eacute;curit&eacute;</button>
-                        <button type="button" class="filter-chip" data-value="sedentarite">S&eacute;dentarit&eacute;</button>
-                        <button type="button" class="filter-chip" data-value="reseau-militant">R&eacute;seau militant</button>
+                    <span class="filter-label">Cat&eacute;gorie</span>
+                    <div class="filter-chips" data-filter="categorie">
+                        <button type="button" class="filter-chip active" data-value="all">Tout</button>
+                        <button type="button" class="filter-chip" data-value="actualite">Actualit&eacute;s</button>
+                        <button type="button" class="filter-chip" data-value="ressource">Ressources</button>
                     </div>
                 </div>
                 <div class="filter-group">
-                    <span class="filter-label">Type</span>
-                    <div class="filter-chips" data-filter="type">
-                        <button type="button" class="filter-chip active" data-value="all">Tous</button>
-                        <button type="button" class="filter-chip" data-value="webinaire">Webinaire</button>
-                        <button type="button" class="filter-chip" data-value="article">Article</button>
-                        <button type="button" class="filter-chip" data-value="flyer">Flyer</button>
-                        <button type="button" class="filter-chip" data-value="affiche">Affiche</button>
-                        <button type="button" class="filter-chip" data-value="infographie">Infographie</button>
-                        <button type="button" class="filter-chip" data-value="guide">Guide</button>
-                        <button type="button" class="filter-chip" data-value="podcast">Podcast</button>
-                        <button type="button" class="filter-chip" data-value="video">Vid&eacute;o</button>
-                        <button type="button" class="filter-chip" data-value="web">Web</button>
-                        <button type="button" class="filter-chip" data-value="application">Application</button>
+                    <span class="filter-label">Th&eacute;matique</span>
+                    <div class="filter-chips" data-filter="theme">
+                        <button type="button" class="filter-chip active" data-value="all">Toutes</button>
+                        <button type="button" class="filter-chip" data-value="activite-physique">Activit&eacute; physique et sportive</button>
+                        <button type="button" class="filter-chip" data-value="inclusion">Inclusion</button>
+                        <button type="button" class="filter-chip" data-value="alimentation">Nutrition</button>
+                        <button type="button" class="filter-chip" data-value="sante-mentale">Sant&eacute; mentale</button>
+                        <button type="button" class="filter-chip" data-value="qvct"><abbr title="Qualité de Vie et Conditions de Travail">QVCT</abbr></button>
+                        <button type="button" class="filter-chip" data-value="sante-environnementale">Sant&eacute; environnementale</button>
+                        <button type="button" class="filter-chip" data-value="consommation">Consommation</button>
+                        <button type="button" class="filter-chip" data-value="sommeil">Sommeil</button>
+                        <button type="button" class="filter-chip" data-value="securite">S&eacute;curit&eacute;</button>
+                        <button type="button" class="filter-chip" data-value="sedentarite">S&eacute;dentarit&eacute;</button>
+                        <button type="button" class="filter-chip" data-value="reseau-militant">R&eacute;seau militant</button>
+                        <button type="button" class="filter-chip" data-value="evenement">&Eacute;v&eacute;nement</button>
+                        <button type="button" class="filter-chip" data-value="formation">Formation</button>
                     </div>
                 </div>
             </div>
@@ -247,13 +240,13 @@
     (function(){
         var grid=document.getElementById('blogGrid');
         var noRes=document.querySelector('.blog-noresults');
-        var state={theme:'all',type:'all'};
+        var state={categorie:'all',theme:'all'};
         function esc(s){return (s||'').replace(/"/g,'&quot;');}
         function card(a){
             var href=a.external?a.external:('article.html?id='+encodeURIComponent(a.id));
             var ext=a.external?' target="_blank" rel="noopener"':'';
             var label=a.external?'Consulter':'Lire la suite';
-            return '<article class="blog-card" data-theme="'+a.theme+'" data-type="'+a.type+'">'
+            return '<article class="blog-card" data-categorie="'+(a.categorie||'actualite')+'" data-theme="'+a.theme+'">'
               +'<a class="blog-card-imglink" href="'+href+'"'+ext+'><div class="blog-card-image">'
               +'<img src="'+a.image+'" alt="'+esc(a.title)+'" loading="lazy"></div></a>'
               +'<div class="blog-card-content"><div class="blog-card-meta">'
@@ -265,10 +258,16 @@
         }
         function render(){
             var list=(window.ARTICLES||[]).filter(function(a){
-                return (state.theme==='all'||a.theme===state.theme)&&(state.type==='all'||a.type===state.type);
+                return (state.categorie==='all'||(a.categorie||'actualite')===state.categorie)&&(state.theme==='all'||a.theme===state.theme);
             });
             grid.innerHTML=list.map(card).join('');
-            if(noRes) noRes.hidden=list.length>0;
+            if(noRes){
+                noRes.hidden=list.length>0;
+                var total=(window.ARTICLES||[]).length;
+                noRes.textContent = total>0
+                    ? "Aucun contenu ne correspond à cette sélection pour le moment."
+                    : "Nos actualités et ressources seront publiées prochainement.";
+            }
         }
         document.querySelectorAll('.filter-chip').forEach(function(c){
             c.addEventListener('click',function(){
@@ -287,23 +286,24 @@
             var bar=document.querySelector('.blog-filters');
             if(!bar) return;
             if(!arts.length){ bar.style.display='none'; return; }
-            var present={theme:{},type:{}};
-            arts.forEach(function(a){ present.theme[a.theme]=1; present.type[a.type]=1; });
-            document.querySelectorAll('.filter-chips').forEach(function(wrap){
-                var dim=wrap.getAttribute('data-filter'); // 'theme' | 'type'
+            var present={theme:{}};
+            arts.forEach(function(a){ present.theme[a.theme]=1; });
+            // Niveau 1 (Catégorie) : toujours visible (Tout / Actualités / Ressources).
+            // Niveau 2 (Thématique) : on masque les thèmes sans contenu ; ils
+            // réapparaissent au fur et à mesure des publications.
+            var themeWrap=document.querySelector('.filter-chips[data-filter="theme"]');
+            if(themeWrap){
                 var kept=0;
-                wrap.querySelectorAll('.filter-chip').forEach(function(c){
+                themeWrap.querySelectorAll('.filter-chip').forEach(function(c){
                     var v=c.getAttribute('data-value');
                     if(v==='all') return;
-                    if(present[dim][v]){ kept++; }
-                    else { c.style.display='none'; }
+                    if(present.theme[v]){ kept++; } else { c.style.display='none'; }
                 });
-                // si 0 ou 1 valeur réelle, le groupe entier n'a pas d'intérêt
                 if(kept<=1){
-                    var grp=wrap.closest('.filter-group');
+                    var grp=themeWrap.closest('.filter-group');
                     if(grp) grp.style.display='none';
                 }
-            });
+            }
         })();
         render();
     })();

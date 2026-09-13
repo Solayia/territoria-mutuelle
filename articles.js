@@ -3,9 +3,17 @@
    ------------------------------------------------------------
    Pour AJOUTER une actualité : copiez un bloc { ... } dans le tableau
    ci-dessous (voir modèle en commentaire). Champs :
-     id, title, dateLabel, dateISO, theme, type, tag, image, excerpt,
+     id, title, dateLabel, dateISO, categorie, theme, type, tag, image, excerpt,
      external (URL/PDF optionnel — si présent, le clic ouvre ce lien),
      body (contenu HTML de l'article, ignoré si "external" est défini)
+   ------------------------------------------------------------
+   FILTRES de la page Actualités (2 niveaux) :
+     categorie : "actualite" ou "ressource"  (niveau 1)
+     theme     : activite-physique | inclusion | alimentation | sante-mentale
+                 | qvct | sante-environnementale | consommation | sommeil
+                 | securite | sedentarite | reseau-militant | evenement
+                 | formation   (niveau 2 ; les filtres sans article sont
+                 masqués automatiquement, ils apparaissent au fur et à mesure)
    ------------------------------------------------------------
    MODÈLE :
    {
@@ -25,7 +33,7 @@ window.ARTICLES = [
     id: "challenge-inclusion-2026",
     title: "Challenge Inclusion 2026&nbsp;: c'est le moment de candidater&nbsp;!",
     dateLabel: "8 septembre 2026", dateISO: "2026-09-08",
-    theme: "inclusion", type: "article", tag: "Inclusion",
+    categorie: "actualite", theme: "inclusion", type: "article", tag: "Inclusion",
     image: "assets/img/actu-challenge-inclusion.png",
     excerpt: "La 6ᵉ édition du Challenge Inclusion récompense les projets porteurs de sens et de solidarité. Une catégorie dédiée aux collectivités est pilotée par TERRITORIA mutuelle, aux côtés du groupe APICIL.",
     external: null,
@@ -55,7 +63,7 @@ window.ARTICLES = [
     id: "septembre-bouge-2026",
     title: "«&nbsp;Septembre bouge&nbsp;»&nbsp;: le sport, réflexe santé du quotidien",
     dateLabel: "1ᵉʳ septembre 2026", dateISO: "2026-09-01",
-    theme: "activite-physique", type: "article", tag: "Activité physique et sportive",
+    categorie: "actualite", theme: "activite-physique", type: "article", tag: "Activité physique et sportive",
     image: "assets/img/actu-septembre-bouge.jpg",
     excerpt: "Le ministère chargé des sports lance la première édition du mois «&nbsp;Septembre bouge&nbsp;» pour faire de l'activité physique un réflexe du quotidien. TERRITORIA mutuelle salue l'initiative.",
     external: null,
@@ -76,7 +84,7 @@ window.ARTICLES = [
     id: "salon-des-maires-2026",
     title: "TERRITORIA mutuelle présente au Salon des maires 2026",
     dateLabel: "4 septembre 2026", dateISO: "2026-09-04",
-    theme: "actualites", type: "article", tag: "Actualités",
+    categorie: "actualite", theme: "evenement", type: "article", tag: "Événement",
     image: "assets/img/actu-salon-des-maires.png",
     excerpt: "Du 24 au 26 novembre 2026, retrouvez TERRITORIA mutuelle au Salon des maires et des collectivités locales, sur le stand APICIL/TERRITORIA.",
     external: null,
@@ -98,7 +106,7 @@ window.ARTICLES = [
     id: "offre-formation-territoria",
     title: "Une offre de formation en cours d'élaboration",
     dateLabel: "4 septembre 2026", dateISO: "2026-09-04",
-    theme: "actualites", type: "article", tag: "Formation",
+    categorie: "actualite", theme: "formation", type: "article", tag: "Formation",
     image: "assets/img/actu-formation.svg",
     excerpt: "TERRITORIA mutuelle devient son propre organisme de formation pour accompagner agents et élus sur les questions de prévention et de qualité de vie au travail.",
     external: null,
