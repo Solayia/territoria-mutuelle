@@ -7,6 +7,7 @@ requête vers un service tiers au chargement).
 ## Unsplash (https://unsplash.com/license)
 - `assets/img/hero-accueil.jpg` (+ variantes WebP) — Unsplash
 - `assets/img/missions/08_promotion_sante_formation.jpg` — Vitaly Gariev — https://unsplash.com/@vitalygariev
+- `assets/img/missions/16_partenariats_parrainage.jpg` — Rashpal Singh — https://unsplash.com/@rashpalsingh
 
 ## Pexels (https://www.pexels.com/license/) — pages « missions »
 - `01_action_sociale_ecoute.jpg` — Alex Green — https://www.pexels.com/photo/5699418/
