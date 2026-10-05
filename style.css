@@ -2234,8 +2234,21 @@ p { line-height: 1.75; }
   height: auto;
   object-fit: contain;
 }
+/* Logo conçu pour fond foncé (ex. ANDCDG, texte blanc) : pastille sombre pour le rendre lisible sur fond blanc */
+.partner-logo--dark {
+  max-width: 100%;
+  max-height: none;
+  width: 100%;
+  padding: 14px 16px;
+  background: #2d313a;
+  border-radius: var(--radius-md);
+  opacity: 1;
+  filter: none;
+  box-sizing: border-box;
+}
 @media (max-width: 640px) {
   .partner-item { grid-template-columns: 1fr; gap: 14px; }
+  .partner-logo--dark { max-width: 220px; }
 }
 
 .section--alt { background: var(--gray-50); }
