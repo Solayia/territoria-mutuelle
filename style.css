@@ -1956,34 +1956,69 @@ p { line-height: 1.75; }
 .commission-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 26px;
+  gap: 24px;
+  margin-top: 30px;
 }
 .commission-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 12px;
-  padding: 26px 18px;
-  background: var(--gray-50);
+  padding: 32px 22px 28px;
+  background: var(--white);
   border: 1px solid var(--gray-100);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--duration), box-shadow var(--duration), border-color var(--duration);
+}
+.commission-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+.commission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--gray-200);
 }
 .commission-photo {
-  width: 96px;
-  height: 96px;
+  width: 104px;
+  height: 104px;
   border-radius: var(--radius-full);
   object-fit: cover;
-  box-shadow: var(--shadow-sm);
-  border: 3px solid var(--white);
+  border: 4px solid var(--white);
+  box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.28), var(--shadow-md);
+  margin-bottom: 18px;
+  transition: box-shadow var(--duration);
 }
-.commission-name {
-  font-size: 0.98rem;
+.commission-card:hover .commission-photo {
+  box-shadow: 0 0 0 3px var(--primary), var(--shadow-lg);
+}
+.commission-card .commission-name {
+  font-size: 1.02rem;
   font-weight: 700;
   line-height: 1.35;
   color: var(--gray-900);
-  margin: 2px 0 0;
+  margin: 0 0 14px;
+  padding-bottom: 14px;
+  position: relative;
+  letter-spacing: -0.01em;
+}
+.commission-name::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--primary);
+  opacity: 0.35;
 }
 .commission-pres {
   font-size: 0.9rem;
@@ -1991,9 +2026,9 @@ p { line-height: 1.75; }
   margin: 0;
   line-height: 1.5;
 }
-.commission-pres strong { color: var(--primary); }
+.commission-pres strong { color: var(--primary); font-weight: 700; }
 @media (max-width: 760px) {
-  .commission-grid { grid-template-columns: 1fr; gap: 16px; max-width: 420px; margin-left: auto; margin-right: auto; }
+  .commission-grid { grid-template-columns: 1fr; gap: 18px; max-width: 420px; margin-left: auto; margin-right: auto; }
 }
 
 /* ---- Trombinoscope du Bureau ---- */
@@ -2001,52 +2036,87 @@ p { line-height: 1.75; }
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  margin-top: 28px;
+  gap: 24px;
+  margin-top: 34px;
 }
 .bureau-card {
-  flex: 1 1 200px;
-  max-width: 228px;
+  position: relative;
+  flex: 1 1 212px;
+  max-width: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 8px;
-  padding: 24px 16px 22px;
-  background: var(--gray-50);
+  padding: 32px 22px 28px;
+  background: var(--white);
   border: 1px solid var(--gray-100);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--duration), box-shadow var(--duration), border-color var(--duration);
+}
+.bureau-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+.bureau-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--gray-200);
 }
 .bureau-photo {
-  width: 110px;
-  height: 110px;
+  width: 124px;
+  height: 124px;
   border-radius: var(--radius-full);
   object-fit: cover;
-  box-shadow: var(--shadow-sm);
-  border: 3px solid var(--white);
+  border: 4px solid var(--white);
+  box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.28), var(--shadow-md);
+  margin-bottom: 18px;
+  transition: box-shadow var(--duration);
 }
-.bureau-name {
-  font-size: 1rem;
+.bureau-card:hover .bureau-photo {
+  box-shadow: 0 0 0 3px var(--primary), var(--shadow-lg);
+}
+.bureau-card .bureau-name {
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin: 4px 0 0;
+  margin: 0 0 8px;
   line-height: 1.3;
+  letter-spacing: -0.01em;
 }
-.bureau-role {
-  font-size: 0.85rem;
+.bureau-card .bureau-role {
+  position: relative;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--primary);
-  margin: 0;
-  line-height: 1.35;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  line-height: 1.4;
+}
+.bureau-role::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--primary);
+  opacity: 0.35;
 }
 .bureau-bio {
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   color: var(--gray-600);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 @media (max-width: 520px) {
-  .bureau-card { flex-basis: 100%; max-width: 320px; }
+  .bureau-card { flex-basis: 100%; max-width: 340px; }
 }
 
 @media (max-width: 860px) {
