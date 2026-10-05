@@ -8,6 +8,8 @@ requête vers un service tiers au chargement).
 - `assets/img/hero-accueil.jpg` (+ variantes WebP) — Unsplash
 - `assets/img/missions/08_promotion_sante_formation.jpg` — Vitaly Gariev — https://unsplash.com/@vitalygariev
 - `assets/img/missions/16_partenariats_parrainage.jpg` — Rashpal Singh — https://unsplash.com/@rashpalsingh
+- `assets/img/actu/gouvernance.jpg` — Vitaly Gariev — https://unsplash.com/@silverkblack
+- `assets/img/actu/comite-partenaires.jpg` — Vitaly Gariev — https://unsplash.com/@silverkblack
 
 ## Pexels (https://www.pexels.com/license/) — pages « missions »
 - `01_action_sociale_ecoute.jpg` — Alex Green — https://www.pexels.com/photo/5699418/
@@ -27,6 +29,8 @@ requête vers un service tiers au chargement).
 
 ## Visuels fournis par la cliente
 - Actualités (`assets/img/actu-*.jpg/.png`) — TERRITORIA mutuelle / APICIL et partenaires (Challenge Inclusion, Salon des maires, Septembre bouge).
+- Photos du bureau et des présidents de commission (`assets/img/bureau/*`, `assets/img/actu/philippe-mahe-president.jpg`) — TERRITORIA mutuelle.
+- Cartes et liste du réseau militant (`assets/img/actu/liste-delegues-2026.*`, `carte-referents-2026.*`, `carte-delegues-correspondants-2026.*`) — TERRITORIA mutuelle.
 - Logos et illustrations (`assets/img/logo.png`, `assets/img/partners/*`, `*.svg`) — propriété de TERRITORIA mutuelle et de ses partenaires.
 
 > Note : Unsplash et Pexels n'imposent pas d'attribution obligatoire, mais

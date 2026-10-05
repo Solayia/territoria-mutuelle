@@ -2375,6 +2375,22 @@ p { line-height: 1.75; }
 #articleBody a:not(.download-link) { color: var(--primary); font-weight: 500; }
 #articleBody ul { padding-left: 20px; margin-bottom: 16px; }
 #articleBody li { color: var(--gray-600); line-height: 1.75; margin-bottom: 6px; }
+#articleBody img { max-width: 100%; height: auto; }
+#articleBody .article-figure { margin: 20px 0 28px; }
+#articleBody .article-figure img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+#articleBody .article-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  text-align: center;
+}
+#articleBody .article-figure figcaption a { color: var(--primary); font-weight: 600; }
 
 .blog-card {
   display: flex;
