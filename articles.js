@@ -88,7 +88,7 @@ window.ARTICLES = [
     id: "reseau-militant-delegues-2026",
     title: "Un réseau militant pour agir au plus près des territoires",
     dateLabel: "22 septembre 2026", dateISO: "2026-09-22",
-    categorie: "actualite", theme: "reseau-militant", type: "article", tag: "Réseau militant",
+    categorie: "actualite", theme: "reseau-militant", themes: ["reseau-militant", "vie-institutionnelle"], type: "article", tag: "Réseau militant",
     image: "assets/img/missions/10_reseau_militant_rencontre.jpg",
     excerpt: "59 délégués et 7 correspondants, présents sur tout le territoire, représentent les adhérents et animent la vie du réseau militant de TERRITORIA mutuelle.",
     external: null,

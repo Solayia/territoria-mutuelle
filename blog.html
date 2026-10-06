@@ -236,7 +236,7 @@
     </footer>
 
     <script src="script.js?v=20261006"></script>
-    <script src="articles.js?v=20261006"></script>
+    <script src="articles.js?v=20261007"></script>
     <script>
     (function(){
         var grid=document.getElementById('blogGrid');
@@ -259,8 +259,10 @@
         }
         function render(){
             var list=(window.ARTICLES||[]).filter(function(a){
-                return (state.categorie==='all'||(a.categorie||'actualite')===state.categorie)&&(state.theme==='all'||a.theme===state.theme);
+                var themeMatch=state.theme==='all'||a.theme===state.theme||(a.themes&&a.themes.indexOf(state.theme)>=0);
+                return (state.categorie==='all'||(a.categorie||'actualite')===state.categorie)&&themeMatch;
             });
+            list.sort(function(a,b){ return (b.dateISO||'').localeCompare(a.dateISO||''); });
             grid.innerHTML=list.map(card).join('');
             if(noRes){
                 noRes.hidden=list.length>0;
