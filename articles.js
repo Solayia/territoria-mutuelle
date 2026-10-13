@@ -113,10 +113,10 @@ window.ARTICLES = [
       + "<figcaption>Vos délégués — mandat 2026-2030. <a href=\"assets/img/actu/liste-delegues-2026.jpg\" target=\"_blank\" rel=\"noopener\">Agrandir<span class=\"visually-hidden\"> (nouvelle fenêtre)</span></a></figcaption></figure>"
       + "<h3>Vos référents régionaux</h3>"
       + "<p>Pour faciliter l'animation de ce réseau, des référents régionaux ont été désignés pour favoriser le partage d'information et la vie du réseau en région. Retrouvez-les également sur la page <a href=\"qui-sommes-nous.html#gouvernance\">Qui sommes-nous</a>.</p>"
-      + "<figure class=\"article-figure\"><a href=\"assets/img/actu/carte-referents-2026.jpg\" target=\"_blank\" rel=\"noopener\">"
-      + "<picture><source srcset=\"assets/img/actu/carte-referents-2026.webp\" type=\"image/webp\">"
-      + "<img src=\"assets/img/actu/carte-referents-2026.jpg\" alt=\"Carte des référents régionaux de TERRITORIA mutuelle avec leurs coordonnées\" loading=\"lazy\"></picture></a>"
-      + "<figcaption>Les référents régionaux — version du 17/04/2026. <a href=\"assets/img/actu/carte-referents-2026.jpg\" target=\"_blank\" rel=\"noopener\">Agrandir<span class=\"visually-hidden\"> (nouvelle fenêtre)</span></a></figcaption></figure>"
+      + "<figure class=\"article-figure\"><a href=\"assets/img/actu/carte-referents-2026.jpg?v=20261013\" target=\"_blank\" rel=\"noopener\">"
+      + "<picture><source srcset=\"assets/img/actu/carte-referents-2026.webp?v=20261013\" type=\"image/webp\">"
+      + "<img src=\"assets/img/actu/carte-referents-2026.jpg?v=20261013\" alt=\"Carte des référents régionaux de TERRITORIA mutuelle avec leurs coordonnées\" loading=\"lazy\"></picture></a>"
+      + "<figcaption>Les référents régionaux — version du 17/04/2026. <a href=\"assets/img/actu/carte-referents-2026.jpg?v=20261013\" target=\"_blank\" rel=\"noopener\">Agrandir<span class=\"visually-hidden\"> (nouvelle fenêtre)</span></a></figcaption></figure>"
   },
 
   {
