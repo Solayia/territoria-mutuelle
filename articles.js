@@ -30,6 +30,24 @@
 window.ARTICLES = [
 
   {
+    id: "congres-andcdg-2026",
+    title: "Congrès de l'ANDCDG – 15 et 16 octobre 2026",
+    dateLabel: "16 octobre 2026", dateISO: "2026-10-16",
+    categorie: "actualite", theme: "vie-institutionnelle", themes: ["vie-institutionnelle", "evenement"], type: "article", tag: "Événement",
+    image: "assets/img/actu/congres-andcdg.jpg",
+    excerpt: "Les 15 et 16 octobre, TERRITORIA mutuelle et TERRITORIA prévoyance étaient présents au congrès de l'ANDCDG à Lésigny (77), en tant que partenaire premium et animateur d'un atelier sur la soutenabilité.",
+    external: null,
+    body: "<p>Les 15 et 16 octobre, TERRITORIA mutuelle et TERRITORIA prévoyance étaient présents au congrès de l'Association nationale des directeurs et directeurs adjoints de centres de gestion (ANDCDG) à Lésigny (77).</p>"
+      + "<p>En qualité de partenaire premium, TERRITORIA mutuelle, via sa responsable mission prévention, a participé à l'animation de l'un des ateliers de la première matinée, portant sur la soutenabilité et s'inscrivant dans le thème plus global de ce congrès&nbsp;: «&nbsp;Le rôle stratégique des centres de gestion face aux transformations durables du travail&nbsp;: soutenabilité et opportunités&nbsp;». Vaste sujet que celui d'entrevoir l'avenir en matière d'accompagnement des collectivités et, par conséquent, de l'évolution potentielle du rôle des centres de gestion.</p>"
+      + "<p>TERRITORIA a ensuite assuré sa présence dans l'espace partenaires et a ainsi pu échanger avec différents directeurs et directeurs adjoints de centres de gestion tout au long de ces deux jours.</p>"
+      + "<figure class=\"article-figure\">"
+      + "<picture><source srcset=\"assets/img/actu/congres-andcdg-stand.webp\" type=\"image/webp\">"
+      + "<img src=\"assets/img/actu/congres-andcdg-stand.jpg\" alt=\"Le stand TERRITORIA dans l'espace partenaires du congrès de l'ANDCDG, avec des visiteurs échangeant avec l'équipe\" loading=\"lazy\"></picture>"
+      + "<figcaption>TERRITORIA dans l'espace partenaires du congrès de l'ANDCDG.</figcaption></figure>"
+      + "<p>TERRITORIA mutuelle remercie l'ANDCDG et son président, Olivier Ducrocq, de lui avoir proposé de rapporter l'un des ateliers et, plus généralement, pour l'organisation de ce congrès et les moments de partage qu'il aura permis.</p>"
+  },
+
+  {
     id: "philippe-mahe-president",
     title: "Philippe MAHÉ, nouveau président de TERRITORIA mutuelle",
     dateLabel: "29 septembre 2026", dateISO: "2026-09-29",
